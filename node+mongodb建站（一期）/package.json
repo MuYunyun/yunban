@@ -1,0 +1,25 @@
+{
+  "name": "imooc",
+  "version": "1.0.0",
+  "description": "movie_demo",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "moment": "^2.14.1",
+    "mongoose": "^4.6.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "imooc",
+    "movie"
+  ],
+  "author": "Muyunyun",
+  "license": "ISC"
+}
