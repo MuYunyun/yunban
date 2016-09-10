@@ -9,9 +9,12 @@
 * MongoDB
 * Jade
 
+<<<<<<< HEAD
 >人口文件为app.js
 
 
+=======
+>>>>>>> b058e4db760f286ffb2caa05b8f02287fad04cea
 ####list
 * item1
   1. item1.1
