@@ -1,15 +1,14 @@
 {
   "name": "imooc",
+  "version": "0.0.1",
   "authors": [
-    "Muyunyun <328375795@qq.com>"
+    "Scott"
   ],
-  "description": "movie_demo",
-  "main": "",
+  "description": "movies",
   "keywords": [
-    "imooc"
+    "movies"
   ],
   "license": "MIT",
-  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -19,6 +18,6 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "~3.1.0"
   }
 }
