@@ -1,17 +1,22 @@
 var express = require('express')
 var path = require('path')
 var mongoose = require('mongoose')
-var mongoStore = require('connect-mongo')(express)
 var port = process.env.PORT || 3000
 var app = express()
+var bodyParser = require('body-parser')
+var cookieParser = require('cookie-parser')
+var session = require('express-session')
+var mongoStore = require('connect-mongo')(session)  //会话的持久化
+var logger = require('morgan')
+var multipart = require('connect-multiparty')
 var fs = require('fs')
 var dbUrl = 'mongodb://localhost/imooc'
 
 mongoose.connect(dbUrl)
 
-// models loading
+//models loading
 var models_path = __dirname + '/app/models'
-var walk = function(path) {
+var walk = function(path) { //遍历这个目录
   fs
     .readdirSync(path)
     .forEach(function(file) {
@@ -29,31 +34,40 @@ var walk = function(path) {
     })
 }
 walk(models_path)
+
 app.set('views', './app/views/pages')
 app.set('view engine', 'jade')
-app.use(express.bodyParser())
-app.use(express.cookieParser())
-app.use(express.multipart())
-app.use(express.session({
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(express.static(path.join(__dirname, 'public'))) //静态文件配置的目录
+app.use(cookieParser())
+app.use(session({
   secret: 'imooc',
+  resave: false,
+  saveUninitialized: true,
   store: new mongoStore({
-    url: dbUrl,
-    collection: 'sessions'
+  	url: dbUrl,
+  	collection: 'sessions' //存到mongodb里collection的名字
   })
 }))
+app.use(multipart())  //文件表单
 
-if ('development' === app.get('env')) {
-  app.set('showStackError', true)
-  app.use(express.logger(':method :url :status'))
-  app.locals.pretty = true
-  //mongoose.set('debug', true)
+//项目初始配置
+var env = process.env.NODE_ENV || 'development'
+if ('development' === env) {  //开发环境
+	app.set('showStackError', true) //屏幕上显示错误
+	app.use(logger(':method :url :status')) 
+	app.locals.pretty = true  //可读性
+	mongoose.set('debug', true)
 }
 
 require('./config/routes')(app)
 
-app.listen(port)
 app.locals.moment = require('moment')
-app.use(express.static(path.join(__dirname, 'public')))
+app.listen(port)
 
 console.log('imooc started on port ' + port)
+
+
+
+
 
