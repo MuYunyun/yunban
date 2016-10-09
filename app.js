@@ -1,15 +1,10 @@
-var express = require('express')
-var path = require('path')
-var mongoose = require('mongoose')
-var port = process.env.PORT || 3000
-var app = express()
-var bodyParser = require('body-parser')
-var cookieParser = require('cookie-parser')
-var session = require('express-session')
-var mongoStore = require('connect-mongo')(session)  //会话的持久化
-var logger = require('morgan')
-var multipart = require('connect-multiparty')
+'use strict'
+
+var Koa = require('koa')
 var fs = require('fs')
+var mongoose = require('mongoose')
+mongoose.Promise = require('bluebird')
+
 var dbUrl = 'mongodb://localhost/imooc'
 
 mongoose.connect(dbUrl)
@@ -35,39 +30,56 @@ var walk = function(path) { //遍历这个目录
 }
 walk(models_path)
 
-app.set('views', './app/views/pages')
-app.set('view engine', 'jade')
-app.use(bodyParser.urlencoded({extended:true}))
-app.use(express.static(path.join(__dirname, 'public'))) //静态文件配置的目录
-app.use(cookieParser())
-app.use(session({
-  secret: 'imooc',
-  resave: false,
-  saveUninitialized: true,
-  store: new mongoStore({
-  	url: dbUrl,
-  	collection: 'sessions' //存到mongodb里collection的名字
-  })
+var menu = require('./wx/menu')
+var wx = require('./wx/index.js')
+var wechatApi = wx.getWechat()
+
+wechatApi.deleteMenu().then(function() {
+	return wechatApi.createMenu(menu)
+})
+.then(function(msg) {
+	console.log(msg)
+})
+
+var app = new Koa()
+var Router = require('koa-router') //引人路由模块
+var router = new Router() //拿到一个路由的实例
+var session = require('koa-session')
+var bodyParser = require('koa-bodyparser')  //解析post过来的数据
+var User = mongoose.model('User')
+var views = require('koa-views')
+var moment = require('moment')
+
+app.use(views(__dirname + '/app/views', {
+  extension: 'jade',
+  locals: {
+    moment: moment
+  }
 }))
-app.use(multipart())  //文件表单
 
-//项目初始配置
-var env = process.env.NODE_ENV || 'development'
-if ('development' === env) {  //开发环境
-	app.set('showStackError', true) //屏幕上显示错误
-	app.use(logger(':method :url :status')) 
-	app.locals.pretty = true  //可读性
-	mongoose.set('debug', true)
-}
+app.keys = ['imooc']  //设置session的keys
+app.use(session(app))  //传入session的中间件 用cookie实现用户的会话状态
+app.use(bodyParser())
+app.use(function *(next) {  //预处理用户的信息来作同步
+  var user = this.session.user
 
-require('./config/routes')(app)
+  if (user && user._id) {
+    this.session.user = yield User.findOne({_id: user._id}).exec()
+    this.state.user = this.session.user  //每个模板渲染的时候都会读到state
+  }
+  else {
+    this.state.user = null
+  }
 
-app.locals.moment = require('moment')
-app.listen(port)
+  yield next
+})
 
-console.log('imooc started on port ' + port)
+require('./config/routes')(router)
+
+app
+	.use(router.routes())  //让路由规则生效
+	.use(router.allowedMethods())
 
 
-
-
-
+app.listen(1234)
+console.log('Listening 1234')

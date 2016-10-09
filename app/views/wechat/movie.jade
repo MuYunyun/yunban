@@ -1,0 +1,167 @@
+extends ../wechat
+
+block content
+	style.
+		.hd {
+			padding: 2em 0;
+		}
+		.page_title {
+			text-align:center;
+			font-size: 30px;
+			color: #3cc51f;
+			font-weight: 400;
+			margin: 0 15%
+		}
+		img {
+			vertical-align: middle;
+		}
+		p {
+			margin: 0 0 10px;
+		}
+		.media-list {
+			padding-left: 0;
+			list-style: none;
+		}
+		.media-object {
+			display: block;
+		}
+		.pull-left {
+			float: left!important;
+		}
+		.media {
+			margin-top: 15px;
+		}
+		.media, .media-body {
+			overflow: hidden;
+			zoom: 1;
+		}
+		.media:first-child {
+			margin-top: 0;
+		}
+		.media-left, .media>.pull-left {
+			padding-right: 10px;
+		}
+		.media-body {
+			width: 10000px;
+		}
+		.media-body, .media-left, .media-right {
+			display: table-cell;
+			vertical-align: top;
+		}
+		.h4, h4 {
+			font-size: 18px;
+		}
+		.media-heading {
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
+
+	.page
+		.hd
+			h1.page_title= movie.title
+		.bd
+			.weui_cells_title 电影介绍
+			.weui_cells
+				.weui_cell
+					.weui_cell_bd.weui_cell_primary
+						p 电影名字
+					.weui_cell_ft= movie.title
+				.weui_cell
+					.weui_cell_bd.weui_cell_primary
+						p 导演
+					.weui_cell_ft= movie.director
+				.weui_cell
+					.weui_cell_bd.weui_cell_primary
+						p 国家
+					.weui_cell_ft= movie.country
+				.weui_cell
+					.weui_cell_bd.weui_cell_primary
+						p 语言
+					.weui_cell_ft= movie.language
+				.weui_cell
+					.weui_cell_bd.weui_cell_primary
+						p 上映年份
+					.weui_cell_ft= movie.year
+			.weui_cells
+				section
+					img(src="#{movie.poster}", style="width: 100%;")
+			.weui_article
+				section
+					p= movie.summary
+			ul.media-list
+				if comments && comments.length > 0
+					each item in comments
+						li.media
+							.pull-left
+								a.comment(href="#comments", data-cid="#{item._id}", data-tid="#{item.from._id}")
+									img.media-object(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+", style="width: 64px; height: 64px;")
+							.media-body
+								h4.media-heading #{item.from.name}
+								p #{item.content}
+								if item.reply && item.reply.length > 0
+									each reply in item.reply
+										.media
+											.pull-left
+												a.comment(href="#comments", data-cid="#{item._id}", data-tid="#{reply.from._id}")
+													img.media-object(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+", style="width: 64px;height: 64px")
+											.media-body
+												h4.media-heading 
+													| #{reply.from.name}
+													span.text-info &nbsp;回复&nbsp;
+													| #{reply.to.name}:
+												p #{reply.content}
+			#comments
+				form#commentForm(method="POST", action="/user/comment")
+					input#movie(type="hidden", name="comment[movie]", value="#{movie._id}")
+					input#from(type="hidden", name="comment[from]", value="#{user._id}")
+					input#toId(type="hidden", name="comment[tid]")
+					input#commentId(type="hidden", name="comment[cid]")
+					.weui_cells
+						.weui_cell
+							.weui_cell_bd.weui_cell_primary
+								textarea#content.weui_textarea(name="comment[content]", row="3")
+					.weui_btn_area
+						a#submit.weui_btn.weui_btn_primary(type='javascript:;') 提交
+
+
+	script.
+		$(function() {
+			$('.comment').click(function(e) {
+				var target = $(this)
+				var toId = target.data('tid')
+				var commentId = target.data('cid')
+				$('#toId').val(toId)
+				$('#commentId').val(commentId)
+			})
+						
+			$('#submit').click(function(e) {
+				e.preventDefault() //- 禁止掉表单的默认提交
+				$.ajax({
+					type: 'POST',
+					data: {
+						comment: {
+							movie: $('#movie').val(),
+							from: $('#from').val(),
+							tid: $('#toId').val(),
+							cid: $('#commentId').val(),
+							content: $('#content').val(),
+						}
+					},
+					url: '/user/comment',				
+					success: function(results) {
+						if (results.success === 1) {
+							window.location.reload()  //- 页面不刷新,待实现(动态插入dom节点里面去)
+						}
+					}
+				})
+			})
+		})
+
+
+
+
+
+
+
+
+

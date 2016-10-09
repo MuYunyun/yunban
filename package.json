@@ -1,40 +1,47 @@
 {
-  "name": "imooc",
+  "name": "wechat-movie",
   "version": "1.0.0",
-  "description": "movie_demo",
+  "description": "wechat-movie",
   "main": "app.js",
   "dependencies": {
     "bcrypt": "^0.8.7",
-    "body-parser": "^1.15.2",
-    "bootstrap": "^3.3.7",
-    "connect-mongo": "^1.3.2",
-    "cookie-session": "^2.0.0-alpha.1",
+    "bluebird": "^3.4.6",
+    "co": "^4.6.0",
+    "crypto": "^0.0.3",
+    "deepmerge": "^1.0.2",
+    "ejs": "^2.5.2",
     "express": "^4.14.0",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-less": "^1.4.0",
-    "grunt-contrib-uglify": "^2.0.0",
-    "grunt-mocha-test": "^0.12.7",
-    "jade": "^1.11.0",
-    "mocha-test": "^1.0.3",
-    "moment": "^2.14.1",
-    "mongoose": "^4.6.0",
-    "morgan": "^1.7.0",
-    "should": "^11.1.0",
-    "underscore": "^1.8.3"
-  },
-  "devDependencies": {
+    "g": "^2.0.1",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
     "grunt-concurrent": "^2.3.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-nodemon": "^0.4.2",
-    "mocha": "^3.0.2"
+    "heredoc": "^1.3.1",
+    "jade": "^1.11.0",
+    "koa": "^1.2.4",
+    "koa-body": "^1.5.0",
+    "koa-bodyparser": "^2.2.0",
+    "koa-request": "^1.0.0",
+    "koa-router": "^5.4.0",
+    "koa-session": "^3.3.1",
+    "koa-views": "^4.0.0",
+    "lodash": "^4.16.1",
+    "moment": "^2.15.1",
+    "mongoose": "^4.6.1",
+    "raw-body": "^2.1.7",
+    "request": "^2.74.0",
+    "sha1": "^1.1.1",
+    "xml2js": "^0.4.17",
+    "xss": "^0.2.13"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "imooc",
-    "movie"
+    "wechat-movie"
   ],
-  "author": "Muyunyun",
+  "author": "牧云云",
   "license": "ISC"
 }

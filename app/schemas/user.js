@@ -7,6 +7,7 @@ var UserSchema = new mongoose.Schema({
 		unique: true,
 		type: String
 	},
+	openid: String,
 	password: String,
 	// 0: normal user
 	// 1: verified user
@@ -51,12 +52,13 @@ UserSchema.pre('save', function(next) {
 })
 
 UserSchema.methods = {
-	comparePassword: function(_password, cb) {
-		bcrypt.compare(_password, this.password, function(err, isMatch) {
-			if (err) return cb(err)
+	comparePassword: function(_password, password) {
 
-			cb(null, isMatch)
-		})
+		return function(cb) {
+			bcrypt.compare(_password, password, function(err, isMatch) {
+				cb(err, isMatch)
+			})
+		}
 	}
 }
 
