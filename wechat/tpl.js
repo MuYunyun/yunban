@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-var ejs = require('ejs')
-var heredoc = require('heredoc')
+var ejs = require('ejs');
+var heredoc = require('heredoc');
 
 var tpl = heredoc(function() {/*
 	<xml>
@@ -48,13 +48,13 @@ var tpl = heredoc(function() {/*
 		</Articles>
 	<% } %>
 	</xml>
-*/})
+*/});
 
-var compiled = ejs.compile(tpl)  //编译这个模板
+var compiled = ejs.compile(tpl);  //编译这个模板
 
 exports = module.exports = {
 	compiled: compiled
-}
+};
 
 
 

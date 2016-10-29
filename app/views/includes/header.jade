@@ -1,19 +1,8 @@
-.container
-	.row
-		.page-header.clearfix
-			h1= title
-			.col-md-4
-				small 重度科幻迷
-			.col-md-8
-				form(method='GET', action='/results')
-					.input-group.col-sm-4.pull-right
-						input.form-control(type='text', name='q')
-						span.input-group-btn
-							button.btn.btn-default(type='submit') 收索
-.navbar.navbar-default.navbar-fixed-bottom
-	.container
-		.navbar-header
-			a.navbar-brand(href="/") 重度科幻迷
+.nav-top
+	.container-fluid
+		.navbar-header.clearfix
+			a.navbar-brand(href="/movieIndex") 电影
+			a.navbar-brand(href="/musicIndex") 音乐
 		if user
 			p.navbar-text.navbar-right
 				span 欢迎您,#{user.name}
@@ -24,37 +13,92 @@
 				a.navbar-link(href="#", data-toggle="modal", data-target="#signupModal") 注册
 				span &nbsp;|&nbsp;
 				a.navbar-link(href="#", data-toggle="modal", data-target="#signinModal") 登录
-#signupModal.modal.fade
-	.modal-dialog
+
+.nav
+	.nav-wrap.clearfix
+		.nav-logo
+			if logo === 'movie'
+				- var logoName = '电影'
+				a(href="/movieIndex")
+					img(src="/libs/images/movie/movieLogo.png" alt="movieLogo" style="width:115px;height:27px;")
+			else
+				- var logoName = '音乐'
+				a(href="/musicIndex")
+					img(src="/libs/images/music/musicLogo.png" alt="musicLogo" style="width:115px;height:27px;")
+		.nav-search
+			form(method='GET', action='/#{logo}/results')
+				.input-group
+					input.form-control(type='text', name='q', placeholder="#{logoName}搜索")
+					span.input-group-btn
+						button.btn.btn-default(type='submit')
+							span.glyphicon.glyphicon-search
+	.nav-wrap
+		if user && user.role > 10
+			ul.clearfix
+				li: a(href="/admin/#{logo}/new" target="_blank") #{logoName}后台录入页
+				li: a(href="/admin/#{logo}/list" target="_blank") #{logoName}列表页
+				li: a(href="/admin/#{logo}/category/new" target="_blank") #{logoName}分类录入页
+				li: a(href="/admin/#{logo}/category/list" target="_blank") #{logoName}分类列表页
+				if logo === 'movie'
+					li: a(href="/admin/city/new" target="_blank") 电影院录入页
+					li: a(href="/admin/city/list" target="_blank") 电影院列表页
+				else
+					li: a(href="admin/music/programme/list" target="_blank") 热门榜单列表页
+				li: a(href="/admin/user/list" target="_blank") 用户列表页
+#signupModal.modal.fade(role="dialog" aria-labelledby="注册" tabindex="-1")
+	.modal-dialog.sign-form
 		.modal-content
-			form(method="POST", action="/user/signup")
+			form#signupForm(method="POST", action="/user/signup")
 				.modal-header 注册
-				.modal-body
-					.form-group
+				.modal-body.clearfix
+					.form-group.clearfix
 						label(for="signupName") 用户名
-						input#signupName.form-control(name="user[name]", type="text")
-					.form-group
+						input#signupName.form-control(name="name", type="text", placeholder="账号")
+						span.glyphicon.glyphicon-remove-sign.form-clear(aria-hidden="true")
+						label#signupName-error.error(for="signupName" style="display:none")
+					.form-group.clearfix
 						label(for="signupPassword") 密码
-						input#signupPassword.form-control(name="user[password]", type="text")
+						input#signupPassword.form-control(name="password", type="password", placeholder="密码")
+						span.glyphicon.glyphicon-remove-sign.form-clear(aria-hidden="true")
+						label#signupPassword-error.error(for="signupPassword" style="display:none")
+					.form-group.clearfix
+						label(for="signupConfirmPassword") 确认密码
+						input#signupConfirmPassword.form-control(name="confirm-password", type="password", placeholder="确认密码")
+						span.glyphicon.glyphicon-remove-sign.form-clear(aria-hidden="true")
+						label#signupConfirmPassword-error.error(for="signupConfirmPassword" style="display:none")
+					.form-group.clearfix
+						label(for="signupCaptcha") 验证码
+						input#signupCaptcha.form-control.form-captcha(name="captcha", type="test" placeholder="输入验证码")
+						span.glyphicon.glyphicon-remove-sign.form-clear.form-captcha-clear(aria-hidden="true")
+						label#signupCaptcha-error.error(for="signupCaptcha" style="display:none")
+						div.captcha-show
+						p.glyphicon.glyphicon-repeat.captcha-repeat 换一张?
 				.modal-footer
 					button.btn.btn-default(type="button", data-dismiss="modal") 关闭
-					button.btn.btn-success(type="submit") 提交
-#signinModal.modal.fade
-	.modal-dialog
+					button.btn.btn-success(type="submit") 注册
+#signinModal.modal.fade(role="dialog" aria-labelledby="登录豆瓣电影" tabindex="-1")
+	.modal-dialog.sign-form
 		.modal-content
-			form(method="POST", action="/user/signin")
-				.modal-header 登录
-				.modal-body
-					.form-group
+			form#signinForm(method="POST", action="/user/signin")
+				.modal-header 登录豆瓣电影
+				.modal-body.clearfix
+					.form-group.clearfix
 						label(for="signinName") 用户名
-						input#signinName.form-control(name="user[name]", type="text")
-					.form-group
+						input#signinName.form-control(name="name", type="text", placeholder="账号")
+						span.glyphicon.glyphicon-remove-sign.form-clear(aria-hidden="true")
+						label#signinName-error.error(for="signinName" style="display:none")
+					.form-group.clearfix
 						label(for="signinPassword") 密码
-						input#signinPassword.form-control(name="user[password]", type="text")
+						input#signinPassword.form-control(name="password", type="password", placeholder="密码")
+						span.glyphicon.glyphicon-remove-sign.form-clear(aria-hidden="true")
+						label#signinPassword-error.error(for="signinPassword" style="display:none")
+					.form-group.clearfix
+						label(for="signinCaptcha") 验证码
+						input#signinCaptcha.form-control.form-captcha(name="captcha", type="test" placeholder="输入验证码")
+						span.glyphicon.glyphicon-remove-sign.form-clear.form-captcha-clear(aria-hidden="true")
+						label#signinCaptcha-error.error(for="signinCaptcha" style="display:none")
+						div.captcha-show
+						p.glyphicon.glyphicon-repeat.captcha-repeat 换一张?
 				.modal-footer
 					button.btn.btn-default(type="button", data-dismiss="modal") 关闭
-					button.btn.btn-success(type="submit") 提交
-
-
-
-
+					button.btn.btn-success(type="submit") 登录

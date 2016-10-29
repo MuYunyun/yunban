@@ -1,0 +1,71 @@
+
+.hd {
+  padding: 2em 0;
+}
+.page_title {
+  text-align:center;
+  font-size: 30px;
+  color: #3cc51f;
+  font-weight: 400;
+  margin: 0 15%
+}
+img {
+  vertical-align: middle;
+}
+p {
+  margin: 0 0 10px;
+}
+.media-list {
+  padding-left: 0;
+  list-style: none;
+}
+.media-object {
+  display: block;
+}
+.pull-left {
+  float: left!important;
+}
+.media {
+  margin-top: 15px;
+}
+.media, .media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.media:first-child {
+  margin-top: 0;
+}
+.media-left, .media>.pull-left {
+  padding-right: 10px;
+}
+.media-body {
+  width: 10000px;
+}
+.media-body, .media-left, .media-right {
+  display: table-cell;
+  vertical-align: top;
+}
+.h4, h4 {
+  font-size: 18px;
+}
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+
+.bd {
+  .rating-num {
+    display: none;
+  }
+  .weui_cell {
+    .rating-img {
+      width: 75px;
+      height: 15px;
+      overflow: hidden;
+    }
+    .star {
+      background-image: url(/libs/images/includes/stars.png);
+    }
+  }
+}

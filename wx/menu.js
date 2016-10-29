@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 module.exports = {
 	'button': [{
@@ -28,4 +28,4 @@ module.exports = {
 		'type': 'click',
 		'key': 'help'
 	}]
-}
+};

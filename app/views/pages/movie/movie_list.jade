@@ -1,0 +1,42 @@
+extends ../../layout
+
+block content
+	.container
+		.row
+			table.table.table-hover.table-bordered
+				thead
+					tr
+						th 电影名字
+						th 类别
+						th 类型
+						th 导演
+						th 主演
+						th 国家
+						th 评分
+						th 上映年份
+						th 录入时间
+						th pv
+						th 查看
+						th 更新
+						th 删除
+				tbody
+					each item in movies
+						tr(class="item-id-#{item._id}")
+							td #{item.title}
+							td
+								if item.category
+									each cat in item.category
+										#{cat.name}
+							td #{item.genres}
+							td #{item.director}
+							td #{item.casts}
+							td #{item.country}
+							td #{item.rating}
+							td #{item.year}
+							td #{moment(item.meta.updateAt).format('MM/DD/YYYY')}
+							td #{item.pv}
+							td: a(target="_blank", href="/movie/#{item._id}") 查看
+							td: a(target="_blank", href="/admin/movie/update/#{item._id}") 修改
+							td
+								button.btn.btn-danger.movieDel(type="button",data-id="#{item._id}") 删除
+	script(src="/libs/scripts/js/movie/movie_admin.min.js")

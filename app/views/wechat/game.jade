@@ -1,7 +1,7 @@
 extends ../wechat
 
 block content
-	h1 点击标题，开始录音翻译
+	h1 点我搜电影~
 	p#title
 	div#director
 	div#year
@@ -78,7 +78,7 @@ block content
 							isShowProgressTips: 1, // 默认为1，显示进度提示
 							success: function (res) {
 								var result = res.translateResult
-				        $.ajax({
+								$.ajax({
 									type: 'get',
 									url: 'https://api.douban.com/v2/movie/search?q=' + result,
 									dataType: 'jsonp',

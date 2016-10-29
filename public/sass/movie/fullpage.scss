@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.section{
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.slide1{
+  background:url(/libs/images/movie/fullpage/hzw1.jpg) no-repeat center;
+  background-size: cover;
+  img{
+    position: relative;
+    top: 120%;
+  }
+}
+.slide2{
+  background:url(/libs/images/movie/fullpage/hzw2.jpeg) no-repeat center;
+  background-size: cover;
+}
+.slide3{
+  background:url(/libs/images/movie/fullpage/hzw3.jpg) no-repeat center;
+  background-size: cover;
+}
+.slide4{
+  background:url(/libs/images/movie/fullpage/hzw4.jpg) no-repeat center;
+  background-size: cover;
+}
+.section2{
+  background:url(/libs/images/movie/fullpage/hyrz.jpg) no-repeat center;
+  background-size: cover;
+}
+.section3{
+  background:url(/libs/images/movie/fullpage/qsmy2.jpg) no-repeat center;
+  background-size: cover;
+}
+.section4{
+  background:url(/libs/images/movie/fullpage/qsmy.jpg) no-repeat center;
+  background-size: cover;
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    color: #000;
+    display: none;
+  }
+}
