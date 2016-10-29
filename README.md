@@ -38,7 +38,7 @@
   
 项目部分展示:
 -------
-* 待整理
+<img src="http://oegv7uazl.bkt.clouddn.com/yanshi.gif"  height="700" alt="电影首页"/>
 
 项目页面:
 -------
