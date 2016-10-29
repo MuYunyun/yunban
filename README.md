@@ -1,17 +1,14 @@
 #movie_demo
 ***
-###It's a demo practice of building a movie index website with node express mongoDB and jade template
+####在原有movie项目中，增加了微信模块，实现了微信语音（文字）搜电影，排行榜，类别查询等功能
 <br>
 
-####_Markdown test_
+####_技术栈_
 * Node
-* Express
+* koa
 * MongoDB
 * Jade
-
-<<<<<<< HEAD
->人口文件为app.js，增加了微信端的功能。
-
+* 微信各接口调用
 
 ===
 ####list
@@ -29,16 +26,10 @@ __dd__
 
 
 ####Link
-[Baidu](http://www.baidu.com)
+[blog](http://www.cnblogs.com/MuYunyun/)
 ![pikaqiu](http://files.cnblogs.com/files/MuYunyun/pkq.gif)
 
 
-####Code
-这是`js`代码
-
-
-	var name = name 
-	var test = test
 
 
 
