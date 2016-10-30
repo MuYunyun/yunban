@@ -1,0 +1,27 @@
+extends ../../layout
+
+block content
+  .container
+    .row
+      table.table.table-hover.table-bordered
+        thead
+          tr
+            th 音乐分类
+            th 音乐名称
+            th 时间
+            th 查看
+            th 修改
+            th 删除
+        tbody
+          each item in musicCategories
+            tr(class="item-id-#{item._id}")
+              td #{item.name}
+              td
+                each unit in item.musics
+                  #{unit.title}
+              td #{moment(item.meta.updateAt).format('MM/DD/YYYY')}
+              td: a(target="_blank", href="/music/results?q=#{item.name}&p=0") 查看
+              td: a(target="_blank", href="/admin/music/list") 修改
+              td
+                button.btn.btn-danger.musicCtyDel(type="button",data-id="#{item._id}") 删除
+  script(src="/libs/scripts/js/music/music_admin.min.js")

@@ -2,7 +2,9 @@
 
 /* 音乐首页交互 */
 var mongoose = require('mongoose'),
-    Music = mongoose.model('Music');         //音乐数据模型
+    Music = mongoose.model('Music'),         //音乐数据模型
+    musicCategory = mongoose.model('MusicCategory');   //音乐类别数据模型
+
 
 /* 音乐首页 */
 exports.index = function *(next){

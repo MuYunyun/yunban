@@ -1,0 +1,13 @@
+extends ../../layout
+
+block content
+  .container
+    .row
+      form.form-horizontal(method="post", action="/admin/music/category")
+        .form-group
+          label.col-sm-3.control-label(for="inputMusicCategory") 音乐分类
+          .col-sm-6
+            input#inputMusicCategory.form-control(type="text",name="musicCategory[name]")
+        .form-group
+          .col-sm-offset-3.col-sm-6
+            button.btn.btn-default(type="submit") 录入

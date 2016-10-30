@@ -23,7 +23,7 @@ var MusicSchema = new Schema({
   },
   musicCategory: [{                //歌曲分类
     type: ObjectId,
-    ref: 'musicCategory'
+    ref: 'MusicCategory'
   }],
   meta: {
     createAt: {              //创建时间
