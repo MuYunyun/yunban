@@ -20,7 +20,7 @@ exports.save = function *(next) {
 	var _category =  yield Category.findOne({name:category.name}).exec();
 	if(_category) {
 		console.log('电影分类已存在');
-		this.redirect('/admin/movie/category/list');
+		this.redirect('/admin/movie/category/new');
 	}else {
 		 category = new Category(category);
 		 yield category.save();

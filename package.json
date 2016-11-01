@@ -32,6 +32,10 @@
     "xss": "^0.2.13"
   },
   "devDependencies": {
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
     "ccap": "^0.6.10",
     "co": "^4.6.0",
     "del": "^2.2.2",

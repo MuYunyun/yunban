@@ -102,16 +102,38 @@ exports.save = function *(next) {
 		var movie = yield Movie.findOne({_id: movieObj._id}).exec();
 		if (movie.category) {       //如果刚开始类型有被选择的话
 			if (movieObj.category.toString() !== movie.category.toString()) {  // 如果修改电影分类
-				for(var i = 0; i < movie.category.length; i++){   //遍历该电影的所有所属分类
-					var _oldCat = yield Category.findOne({_id: movie.category[i]}).exec();   // 在原电影分类的movies属性中找到该电影的id值并将其删除
-					var index = _oldCat.movies.indexOf(movieObj._id);
-					_oldCat.movies.splice(index, 1);
-					yield _oldCat.save();
-				}
-				for(i=0; i< categoryId.length; i++){     //遍历该电影新选择的所有分类
-					var _newCat = yield Category.findOne({_id: categoryId[i]}).exec(); // 找到电影对应的新电影分类
-					_newCat.movies.push(movieObj._id);    // 将其id值添加到电影分类的movies属性中并保存
-					yield _newCat.save();
+				if (movieObj.category.length===24){           //分类选择改为只选择一个
+					if (movie.category.length === 24){          //分类选择初始为一个
+						_oldCat = yield Category.findOne({_id: movie.category}).exec();   // 在原电影分类的movies属性中找到该电影的id值并将其删除
+						index = _oldCat.movies.indexOf(movieObj._id);
+						_oldCat.movies.splice(index, 1);
+						yield _oldCat.save();
+						_newCat = yield Category.findOne({_id: categoryId}).exec(); // 找到电影对应的新电影分类
+						_newCat.movies.push(movieObj._id);    // 将其id值添加到电影分类的movies属性中并保存
+						yield _newCat.save();
+					}else{    //分类选择初始为多个
+						for(i = 0; i < movie.category.length; i++){   //遍历该电影的所有所属分类
+							_oldCat = yield Category.findOne({_id: movie.category[i]}).exec();   // 在原电影分类的movies属性中找到该电影的id值并将其删除
+							index = _oldCat.movies.indexOf(movieObj._id);
+							_oldCat.movies.splice(index, 1);
+							yield _oldCat.save();
+						}
+						_newCat = yield Category.findOne({_id: categoryId}).exec(); // 找到电影对应的新电影分类
+						_newCat.movies.push(movieObj._id);    // 将其id值添加到电影分类的movies属性中并保存
+						yield _newCat.save();
+					}
+				}else{       //分类选择改为选择多个
+					for(var i = 0; i < movie.category.length; i++){   //遍历该电影的所有所属分类
+						var _oldCat = yield Category.findOne({_id: movie.category[i]}).exec();   // 在原电影分类的movies属性中找到该电影的id值并将其删除
+						var index = _oldCat.movies.indexOf(movieObj._id);
+						_oldCat.movies.splice(index, 1);
+						yield _oldCat.save();
+					}
+					for(i=0; i< categoryId.length; i++){     //遍历该电影新选择的所有分类
+						var _newCat = yield Category.findOne({_id: categoryId[i]}).exec(); // 找到电影对应的新电影分类
+						_newCat.movies.push(movieObj._id);    // 将其id值添加到电影分类的movies属性中并保存
+						yield _newCat.save();
+					}
 				}
 			}
 		}else{       //如果刚开始类型一个也没有被选择的话
@@ -122,7 +144,7 @@ exports.save = function *(next) {
 					yield _newCat.save();
 				}
 			}else {
-				this.redirect('admin/movie/list');
+				this.redirect('/admin/movie/list');
 			}
 		}
 

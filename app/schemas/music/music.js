@@ -11,7 +11,7 @@ var MusicSchema = new Schema({
   singer: String,            //歌手
   version: String,           //专辑类型
   media: String,             //介质
-  image: String,             //海报
+  poster: String,             //海报
   pubdate: String,           //发行时间
   summary: String,           //简介
   publisher: String,         //出版者

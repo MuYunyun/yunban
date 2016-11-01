@@ -14,18 +14,16 @@ block content
               .panel.panel-default
                 .pannel-body.gallery-hot
                   ul.slide-content.clearfix(style="width: 10000px;")
-                    li.slide-item
-                      a(href="javascript:;")
-                        img(src="/libs/images/music/gallery/1.jpg" alt="【豆瓣会客厅】王千源：用实力证明不凡")
-                    li.slide-item
-                      a(href="javascript:;")
-                        img(src="/libs/images/music/gallery/1.jpg" alt="【豆瓣会客厅】王千源：用实力证明不凡")
+                    - for(var i = 1; i <= fileList.length; i++)
+                      li.slide-item
+                        a(href="javascript:;")
+                          img(src="/libs/images/music/gallery/" + i + '.jpg' alt="")
                 button.slide-prev
                 button.slide-next
                 ul.slide-dots
                   li.slide-active 1
-                  li 2
-                  li 3
+                  - for(var i = 2; i <= fileList.length; i++)
+                    li= i
             .panel.panel-default#editorFeatured.editor-featured
               .panel-heading.screen-header
                 h4 编辑推荐
@@ -59,52 +57,6 @@ block content
                 img(src="/libs/images/music/1.jpg" alt="小老虎全国巡演")
             // 新碟榜
             .screen#newAlbums.new-albums
-              .class-top
-                span 新碟榜
-                ul
-                  li.on: a(href="javascript:;") 最热
-                  li: a(href="javascript:;") 华语
-                  li: a(href="javascript:;") 欧美
-                  li: a(href="javascript:;") 日韩
-                  li: a(href="javascript:;") 单曲
-                a.more(href="") 更多
-              .screen
-                .panel-body.screen-body
-                  .thumbnail
-                    a(href="")
-                      img(src="http://img3.douban.com/spic/s28315801.jpg")
-                    .caption
-                      h5
-                        a(href="") 是否,你还记得
-                      p 周杰伦
-                  .thumbnail
-                    a(href="")
-                      img(src="http://img3.douban.com/spic/s28315801.jpg")
-                    .caption
-                      h5
-                        a(href="") 是否,你还记得
-                      p 周杰伦
-                  .thumbnail
-                    a(href="")
-                      img(src="http://img3.douban.com/spic/s28315801.jpg")
-                    .caption
-                      h5
-                        a(href="") 是否,你还记得
-                      p 周杰伦
-                  .thumbnail
-                    a(href="")
-                      img(src="http://img3.douban.com/spic/s28315801.jpg")
-                    .caption
-                      h5
-                        a(href="") 是否,你还记得
-                      p 周杰伦
-                  .thumbnail
-                    a(href="")
-                      img(src="http://img3.douban.com/spic/s28315801.jpg")
-                    .caption
-                      h5
-                        a(href="") 是否,你还记得
-                      p 周杰伦
             // 近期热门歌单
             #hotProgrammes
               .class-top
@@ -225,5 +177,6 @@ block content
                     a(href="")
                       img(src="http://img3.douban.com/spic/s3524062.jpg")
                       h5 完美的一天
-
-
+  // 音乐首页JS脚本
+  script(src="/libs/scripts/components/componentInit.min.js")
+  script(src="/libs/scripts/components/musicBundel.min.js")

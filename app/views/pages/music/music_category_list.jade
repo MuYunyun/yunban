@@ -18,7 +18,7 @@ block content
               td #{item.name}
               td
                 each unit in item.musics
-                  #{unit.title}
+                  | #{unit.title}、
               td #{moment(item.meta.updateAt).format('MM/DD/YYYY')}
               td: a(target="_blank", href="/music/results?q=#{item.name}&p=0") 查看
               td: a(target="_blank", href="/admin/music/list") 修改

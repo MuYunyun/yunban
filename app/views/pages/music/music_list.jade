@@ -35,8 +35,8 @@ block content
               td #{item.pubdate}
               td #{moment(item.meta.updateAt).format('MM/DD/YYYY')}
               td #{item.pv}
-              td: a(target="_blank", href="/movie/#{item._id}") 查看
-              td: a(target="_blank", href="/admin/movie/update/#{item._id}") 修改
+              td: a(target="_blank", href="/music/#{item._id}") 查看
+              td: a(target="_blank", href="/admin/music/update/#{item._id}") 修改
               td
                 button.btn.btn-danger.musicDel(type="button",data-id="#{item._id}") 删除
   script(src="/libs/scripts/js/music/music_admin.min.js")

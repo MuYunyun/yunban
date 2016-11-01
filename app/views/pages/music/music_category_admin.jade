@@ -5,6 +5,21 @@ block content
     .row
       form.form-horizontal(method="post", action="/admin/music/category")
         .form-group
+          label.col-sm-3.control-label(for="inputProgramme") 榜单分类
+          .col-sm-6
+            input#inputProgramme.form-control(type="text",name="musicCategory[programmeName]")
+        .form-group
+          label.col-sm-3.control-label 榜单分类选择
+          .col-sm-6
+            each pro in musicProgrammes
+              label.checkbox-inline
+                input(type="checkbox", name="musicCategory[musicProgramme]", value=pro._id)
+                //if music.category
+                //  each mus in music.category
+                //    if(cat.name.toString() === mus.name.toString())
+                //      input(type="checkbox", name="category", checked=true)
+                | #{pro.name}
+        .form-group
           label.col-sm-3.control-label(for="inputMusicCategory") 音乐分类
           .col-sm-6
             input#inputMusicCategory.form-control(type="text",name="musicCategory[name]")

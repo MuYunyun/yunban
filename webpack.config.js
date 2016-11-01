@@ -39,7 +39,7 @@ module.exports = {
     // JS代码压缩
     new uglifyJsPlugin({
       compress: {
-        warning: false
+        warnings: false
       }
     })
   ]
