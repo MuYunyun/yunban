@@ -17,6 +17,13 @@
   }
 }
 
+/* 音乐详情页播放器部分样式 */
+audio {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
 /* 详情页详细信息介绍部分样式 */
 .detail-body {
   margin: 20px 0 30px;
@@ -25,6 +32,10 @@
     height: 150px;
     float: left;
     margin-right: 10px;
+  }
+  .musicImg {
+    width: 100px;
+    height: 100px;
   }
   .detail-info {
     float: left;
@@ -84,20 +95,4 @@
     heithgt: 100px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -10,6 +10,7 @@ var MusicIndex = require('../app/controllers/music/music_index');      // 音乐
 var Music = require('../app/controllers/music/music');                 // 音乐模块控制器
 var MusicCategory = require('../app/controllers/music/music_category'); //音乐分类控制器
 var MusicProgrammer = require('../app/controllers/music/music_programme'); //音乐热门榜单控制器
+var MusicComment = require('../app/controllers/music/music_comment');    // 音乐评论控制器
 
 var User = require('../app/controllers/user/user');    //用户模块路由控制器
 
@@ -49,7 +50,7 @@ module.exports = function(router) {
 	router.get('/admin/movie/list', User.signinRequired, User.adminRequired, Movie.list);
 	router.delete('/admin/movie/list', User.signinRequired, User.adminRequired, Movie.del);
 
-	// 用户评论路由
+	// 用户电影评论路由
 	router.post('/user/comment', User.signinRequired, MovieComment.save);
 	router.delete('/user/comment/:id', User.signinRequired, MovieComment.del);
 
@@ -70,7 +71,11 @@ module.exports = function(router) {
 	// 音乐主页路由
 	router.get('/musicIndex', MusicIndex.index);
 
+	// 音乐广告页路由
+	router.get('/gallery', MusicIndex.gallery);
+
 	// 音乐详细页面路由
+	router.get('/music/:id', Music.detail);
 	router.post('/admin/music', User.signinRequired, User.adminRequired, koaBody({multipart: true}), Music.savePoster, Music.save);
 	router.get('/admin/music/new', User.signinRequired, User.adminRequired, Music.new);
 	router.get('/admin/music/update/:id', User.signinRequired, User.adminRequired, Music.update);
@@ -86,6 +91,10 @@ module.exports = function(router) {
 	// 音乐热门榜单路由
 	router.get('/admin/music/programme/list', User.signinRequired, User.adminRequired, MusicProgrammer.list);
 	router.delete('/admin/music/programme/list', User.signinRequired, User.adminRequired, MusicProgrammer.del);
+
+	// 用户音乐评论路由
+	router.post('/user/music/comment', User.signinRequired, MusicComment.save);
+	router.delete('/user/music/comment/:id', User.signinRequired, MusicComment.del);
 
 	// wechat
 	router.get('/wechat/movie', Game.guess);

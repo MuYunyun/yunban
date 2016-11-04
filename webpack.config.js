@@ -6,34 +6,35 @@ var webpack = require('webpack'),
     path = require('path');
 
 module.exports = {
-  //页面入口文件配置
   entry: {
     'musicBundle': [
-      './public/scripts/components/music/music_index'     // 引人音乐首页JS脚本
+      './public/scripts/components/music/music_index'      // 引入音乐首页JS脚本
+    ],
+    'gallery': [
+      './public/scripts/components/music/gallery'      // 引入音乐广告JS脚本
     ]
   },
-  //入口文件输出配置
   output: {
-    path: path.join(__dirname, '/public/libs/scripts/components/'),    //输出js路径
+    path: path.join(__dirname, '/public/libs/scripts/components/'),  // 输出JS路径
     filename: '[name].min.js'
   },
   module: {
-    //加载器配置
     loaders: [
       {
-        test: /\.js[x]?$/,                      // 对ES6和React进行转换
-        exclude: /node-modules/,
+        test: /\.js[x]?$/,                           // 对ES6和React进行转换
+        exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          preset: ['es2015', 'react']
+          presets: ['es2015', 'react']
         }
-      }
+      },
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
     ]
   },
-  resolve: {      //其它解决方案配置
-    extensions: ['', '.js', '.jsx']             // 识别文件后缀名
+  resolve: {
+    extensions: ['', '.js', '.jsx']           // 识别文件后缀名
   },
-  plugins: [      // 插件项
+  plugins: [
     // 使用插件将组件中相同部分抽成一个单独文件
     new CommonsChunkPlugin('componentInit.min.js', ['musicBundle']),
     // JS代码压缩

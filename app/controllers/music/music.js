@@ -2,9 +2,31 @@
 
 var mongoose = require('mongoose'),
     Music = mongoose.model('Music'),              // 音乐数据模型
-    MusicCategory = mongoose.model('MusicCategory');
+    MusicCategory = mongoose.model('MusicCategory'),
+    MusicComment = mongoose.model('MusicComment');
 var path = require('path');    // 路径模块
 var _ = require('lodash');     // 该模块用来对变化字段进行更新
+
+/* 详细页面路由 */
+exports.detail = function *(next) {
+  var _id = this.params.id;
+  // 音乐用户访问统计,每次访问音乐详情页,PV增加1
+  yield Music.update({_id:_id},{$inc:{pv:1}}).exec();
+  // MusicComment存储到数据库中的_id值与相应的Music _id值相同
+  var music = yield Music.findOne({_id:_id}).exec();
+  var MusicComments = yield MusicComment
+      .find({music: _id})
+      .populate('from', 'name')   //查找user集合里的name
+      .populate('reply.from reply.to', 'name')
+      .exec();
+
+  yield this.render('pages/music/music_detail', {
+    title: '豆瓣音乐详情页',
+    music: music,
+    logo: 'music',
+    comments: MusicComments
+  });
+};
 
 /* 后台录入路由 */
 exports.new = function *(next) {

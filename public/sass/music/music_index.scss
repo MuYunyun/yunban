@@ -16,7 +16,7 @@ h5{
   font-size: 14px;
   color: #138A64;
   cursor: pointer;
-  @include ellipsis()
+  @include ellipsis;
 }
 .row{margin: 0};
 .col-md-4{
@@ -39,6 +39,12 @@ h5{
     font: 12px Arial,Helvetica,sans-serif;
     cursor: pointer;
     text-decoration: none;
+  }
+  a{
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #999;
   }
   .more{
     &:hover{
@@ -311,6 +317,9 @@ h5{
 
 /* 本周单曲榜样式 */
 .play-button{
+  position: absolute;
+  right: 0;
+  top: 0;
   float: right;
   color: #fff;
   background-color: #139d72;
@@ -375,11 +384,16 @@ h5{
 
 /* 豆瓣音乐250样式 */
 .billboard{
+  position: relative;
   padding-bottom: 30px;
   .billboard-hd{
     border-bottom: 1px solid #e4e2e2;
     height: 30px;
     line-height: 30px;
+    h4{
+      margin: 0;
+      display: inline-block;
+    }
   }
   .billboard-bd{
     margin-top: 10px;

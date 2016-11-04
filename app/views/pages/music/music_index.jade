@@ -24,34 +24,32 @@ block content
                   li.slide-active 1
                   - for(var i = 2; i <= fileList.length; i++)
                     li= i
-            .panel.panel-default#editorFeatured.editor-featured
-              .panel-heading.screen-header
-                h4 编辑推荐
-                .slide-tip
-                  span.ui-side-index 1
-                  span &nbsp;/&nbsp;
-                  span.ui-side-max
-                  button.slide-prev
-                  button.slide-next
-              .panel-body.screen-body
-                .thumbnail
-                  a(href="")
-                    img(src="http://img3.douban.com/spic/s1456874.jpg" alt="")
-                  .caption
-                    p 专辑
-                    h5
-                      a(href="") 十一月的肖邦
-                    p 周杰伦
-                    div 周杰伦/ 内地版 /。
-                .thumbnail
-                  a(href="")
-                    img(src="http://img3.douban.com/spic/s1456874.jpg" alt="")
-                  .caption
-                    p 专辑
-                    h5
-                      a(href="") 十一月的肖邦
-                    p 周杰伦
-                    div 周杰伦/ 内地版 /。
+            each cat in musicCategories
+              if cat.name === '编辑推荐'
+                .panel.panel-default#editorFeatured.editor-featured
+                  .panel-heading.screen-header
+                    h4 #{cat.name}
+                    .slide-tip
+                      span.ui-side-index 1
+                      span &nbsp;/&nbsp;
+                      span.ui-side-max
+                      button.slide-prev
+                      button.slide-next
+                  .panel-body.screen-body
+                    if cat.musics && cat.musics.length > 0
+                      each item in cat.musics
+                        .thumbnail
+                          a(href="/music/#{item._id}" target="_blank")
+                            if item.poster.indexOf('http') > -1
+                              img(src="#{item.poster}", alt="#{item.title}")
+                            else
+                              img(src="/upload/music/#{item.poster}", alt="#{item.title}")
+                          .caption
+                            p #{item.version}
+                            h5
+                              a(href="/music/#{item._id}" target="_blank") #{item.title}
+                            p #{item.singer}
+                            div #{item.summary}
             .left-advertisement
               a(href="javascript:;")
                 img(src="/libs/images/music/1.jpg" alt="小老虎全国巡演")
@@ -59,63 +57,6 @@ block content
             .screen#newAlbums.new-albums
             // 近期热门歌单
             #hotProgrammes
-              .class-top
-                span 近期热门歌单
-                ul
-                  li.on: a(href="javascript:;") 最热
-                  li: a(href="javascript:;") 流行
-                  li: a(href="javascript:;") 摇滚
-                  li: a(href="javascript:;") 民谣
-                  li: a(href="javascript:;") 原生
-                a.more(href="") 更多
-              .screen
-                .panel-body.screen-body
-                  .thumbnail
-                    .inner
-                      h5
-                        a(href="" target="") 听的片刻产生了心动的永恒
-                      .content
-                        img(src="http://img3.douban.com/spic/s3861315.jpg" alt="")
-                        a(href="")
-                          p 1.Everything
-                          p 2.My Forever
-                        span ...
-                  .thumbnail
-                    .inner
-                      h5
-                        a(href="" target="") 听的片刻产生了心动的永恒
-                      .content
-                        img(src="http://img3.douban.com/spic/s3861315.jpg" alt="")
-                        a(href="")
-                          p 1.Everything
-                        span ...
-                  .thumbnail
-                    .inner
-                      h5
-                        a(href="" target="") 听的片刻产生了心动的永恒
-                      .content
-                        img(src="http://img3.douban.com/spic/s3861315.jpg" alt="")
-                        a(href="")
-                          p 1.Everything
-                        span ...
-                  .thumbnail
-                    .inner
-                      h5
-                        a(href="" target="") 听的片刻产生了心动的永恒
-                      .content
-                        img(src="http://img3.douban.com/spic/s3861315.jpg" alt="")
-                        a(href="")
-                          p 1.Everything
-                        span ...
-                  .thumbnail
-                    .inner
-                      h5
-                        a(href="" target="") 听的片刻产生了心动的永恒
-                      .content
-                        img(src="http://img3.douban.com/spic/s3861315.jpg" alt="")
-                        a(href="")
-                          p 1.Everything
-                        span ...
           .col-md-4.col-xs-4.col-sm-4
             // 顶部右侧广告
             .right-advertisement.clearfix
@@ -125,58 +66,43 @@ block content
             .tag-block#tagBlock
               .screen
                 .billboard-hd.class-top
-                  h4 热门音乐人分类
+                  h4 热门音乐分类
                   a.more(href="javascript:;") 更多
-                table.table.table-hover
-                  tbody
-                    tr
-                      td: a 流行
-                      td: a 轻音乐
-                    tr
-                      td: a 摇滚
-                      td: a 古典
+                each cat in programmes
+                  if cat.name === '热门音乐分类'
+                    if cat.musicCategories && cat.musicCategories.length > 0
+                      table.table.table-hover
+                        tbody
+                          - var len = Math.min(10,cat.musicCategories.length)
+                          - for(var i = 0; i < len; i++)
+                            tr
+                              td: a #{cat.musicCategories[i].name}
+                              - i++
+                              td: a #{cat.musicCategories[i].name}
             // 本周单曲版
             #hotArtistSongs
-              .billboard
-                .billboard-hd
-                  h4 本周单曲榜
-                  button.play-button
-                    i.glyphicon.glyphicon-play
-                    span 播放全部
-                .billboard-bd.class-top
-                  ul.hot-artistTop
-                    li.on: a(href="javascript:;") 最热
-                    li: a(href="javascript:;") 摇滚
-                    li: a(href="javascript:;") 民谣
-                    li: a(href="javascript:;") 流行
-                    li: a(href="javascript:;") 电子
-                  .hotArtist-songs
-                    ul
-                      li: a(href="")
-                        img(src="http://img3.douban.com/spic/s1430722.jpg")
-                        h5 黑暗之光
-                        p Maroon 5 / 2次播放
-                        span.order 1
-                      li: a(href="")
-                        img(src="http://img3.douban.com/spic/s1430722.jpg")
-                        h5 黑暗之光
-                        p Maroon 5 / 2次播放
-                        span.order 2
             // 豆瓣音乐250
             #recInfo
               .billboard
-                .billboard-hd.class-top
-                  h4 豆瓣音乐250
-                  a.more(href="") 更多
-                .billboard-bd.clearfix
-                  .thumbnail
-                    a(href="")
-                      img(src="http://img3.douban.com/spic/s3524062.jpg")
-                      h5 完美的一天
-                  .thumbnail
-                    a(href="")
-                      img(src="http://img3.douban.com/spic/s3524062.jpg")
-                      h5 完美的一天
+                each cat in musicCategories
+                  if cat.name === '豆瓣音乐250'
+                    .billboard-hd.class-top
+                      h4 豆瓣音乐250
+                      a.more(href="/music/results?q=#{cat._id}&p=0" target="_blank") 更多
+                    .billboard-bd.clearfix
+                      if cat.musics && cat.musics.length > 0
+                        - var len = Math.min(9,cat.musics.length)
+                        - for(var i = 0; i < len; i++)
+                          .thumbnail
+                            if cat.musics[i]
+                              a(href="/music/#{cat.musics[i]._id}",target="_blank")
+                                if cat.musics[i].poster.indexOf('http') > -1
+                                  img(src="#{cat.musics[i].poster}", alt="#{cat.musics[i].title}")
+                                else
+                                  img(src="/upload/music/#{cat.musics[i].poster}", alt="{cat.musics[i].title}")
+                                h5 #{cat.musics[i].title}
+
+
   // 音乐首页JS脚本
   script(src="/libs/scripts/components/componentInit.min.js")
-  script(src="/libs/scripts/components/musicBundel.min.js")
+  script(src="/libs/scripts/components/musicBundle.min.js")

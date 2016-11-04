@@ -19,7 +19,7 @@ block content
               td
                 if item.musicCategories
                   each cat in item.musicCategories
-                    #{cat.name}
+                    | #{cat.name}、
               td #{moment(item.meta.updateAt).format('MM/DD/YYYY')}
               td: a(target="_blank", href="/music/results?pro=#{item._id}&p=0") 查看
               td: a(target="_blank", href="/admin/music/category/list") 修改
