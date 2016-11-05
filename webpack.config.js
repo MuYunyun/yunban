@@ -16,6 +16,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '/public/libs/scripts/components/'),  // 输出JS路径
+    publicPath:  'http://localhost:1234/libs/scripts/components/', //服务器上查找路径
     filename: '[name].min.js'
   },
   module: {
@@ -28,7 +29,11 @@ module.exports = {
           presets: ['es2015', 'react']
         }
       },
-      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
+      {
+        test: /\.json$/,
+        loader:'json-loader'
+      }
     ]
   },
   resolve: {
