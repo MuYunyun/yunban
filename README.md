@@ -15,7 +15,8 @@
   * 使用`validate.js`完成对账号登录注册的判断;
   * 使用`fullpage.js`完成电影宣传页面制作;
   * 前后端的数据请求交互通过`Ajax`完成;
-  * (音乐端、音乐端广告页)尝试使用React+ES6进行组件化开发，并使用Webpack实现资源模块管理
+  * (音乐端部分模块、音乐端广告页)使用React+ES6进行组件化开发，并使用Webpack实现资源模块管理
+  * 使用`canvas`并调用`webAudio api`完成音乐播放界面的制作
   
 **3. 项目微信端搭建:**  
   * 使用`weui`框架构造详情界面
@@ -37,12 +38,13 @@
   * 微信上通过语音（文字）搜电影;
   * 微信上实现与网页的评论同步;
   * 音乐广告页画廊特效的实现；
+  * 音乐播放界面实现
   
 项目部分展示:
 -------
 
   <img src="http://oegv7uazl.bkt.clouddn.com/yanshi.gif"  height="700" alt="电影手机网页端"/>
-  <img src="http://oegv7uazl.bkt.clouddn.com/music.gif" alt="音乐首页"/>
+  <img src="http://oegv7uazl.bkt.clouddn.com/music.gif" width="80%" alt="音乐首页"/>
 
 
 项目页面:
@@ -57,6 +59,7 @@
 - 音乐首页:localhost:1234/musicIndex 
 - 音乐详情页:localhost:1234/music/:id
 - 音乐广告页:localhost:1234/gallery
+- 音乐播放界面:localhost:1234/musicPlay
 
 **用户后台页:**
 - 用户注册页面: localhost:1234/signup
@@ -78,9 +81,13 @@
 - 分类页:localhost:1234/admin/music/musicCategory/new
 - 热门榜单列表页:localhost:1234/admin/music/programme/list
 
+**微信界面**
+- 该部分待完善
+
+
 目前正在实现的点：
 ------
-* 音乐播放界面的特效实现;
+* 音乐播放界面的完善;
 * 微信音乐端的跟进;
 * 增加电影的app端;
 

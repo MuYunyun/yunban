@@ -31,10 +31,12 @@ class HotArtistSongs extends React.Component {
         <div className="billboard">
           <div className="billboard-hd">
             <h4>本周单曲榜</h4>
-            <button className="play-button">
-              <i className="glyphicon glyphicon-play"></i>
-              <span>播放全部</span>
-            </button>
+            <a href="/musicPlay">
+              <button className="play-button">
+                <i className="glyphicon glyphicon-play"></i>
+                <span>播放全部</span>
+              </button>
+            </a>
           </div>
           <div className="billboard-bd class-top">
             <Title titleTop={this.state.titleTop} selected={this.state.selected} onDataChange={e => this.getData(e)} />

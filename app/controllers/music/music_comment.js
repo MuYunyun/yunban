@@ -35,7 +35,7 @@ exports.save = function *(next) {
   }
 };
 
-// 删除电影评论控制器
+// 删除音乐评论控制器
 exports.del = function *(next) {
   // 获取客户端Ajax发送的URL值中的id值
   var cid = this.request.query.cid;          // 获取该评论的id值

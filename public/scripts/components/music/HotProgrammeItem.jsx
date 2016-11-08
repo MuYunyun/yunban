@@ -20,7 +20,7 @@ class ProgrammeItem extends React.Component {
     return (
       <div className="thumbnail">
         <div className="inner">
-          <h5><a href="" target="_blank">{this.props.dataCars.name}</a></h5>
+          <h5><a href={'/music/results?q=' + this.props.dataCars.name + '&p=0'}>{this.props.dataCars.name}</a></h5>
           <div className="content">
             <img src={dataMusics[0] ? dataMusics[0].poster : ''}
                  alt={dataMusics[0] ? dataMusics[0].title : ''}

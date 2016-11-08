@@ -1,7 +1,7 @@
 extends ../../layout
 
 block link
-  meta(name="description" content="记录你想听的、在听和听过的唱片，顺便打分、添加标签及个人附注、写评论。根据你的口味，豆瓣会推荐适合的唱片给你。")
+  meta(name="description" content="记录你想听的、在听和听过的唱片，顺便打分、添加标签及个人附注、写评论。根据你的口味，云瓣会推荐适合的唱片给你。")
   link(href="/libs/css/music/music_index.min.css",rel="stylesheet")
 block content
   .wrapper
@@ -62,12 +62,12 @@ block content
             .right-advertisement.clearfix
               a(href="/")
                 img(src="/libs/images/music/advertisements/1.jpg")
-            // 热门音乐人分类
+            // 热门音乐分类
             .tag-block#tagBlock
               .screen
                 .billboard-hd.class-top
                   h4 热门音乐分类
-                  a.more(href="javascript:;") 更多
+                  a.more(href="/music/results?pro=581b470286202d04f84be234") 更多
                 each cat in programmes
                   if cat.name === '热门音乐分类'
                     if cat.musicCategories && cat.musicCategories.length > 0
@@ -76,19 +76,19 @@ block content
                           - var len = Math.min(10,cat.musicCategories.length)
                           - for(var i = 0; i < len; i++)
                             tr
-                              td: a #{cat.musicCategories[i].name}
+                              td: a(href="/music/results?q=#{cat.musicCategories[i].name}&p=0") #{cat.musicCategories[i].name}
                               - i++
-                              td: a #{cat.musicCategories[i].name}
+                              td: a(href="/music/results?q=#{cat.musicCategories[i].name}&p=0") #{cat.musicCategories[i].name}
             // 本周单曲版
             #hotArtistSongs
-            // 豆瓣音乐250
+            // 云瓣音乐250
             #recInfo
               .billboard
                 each cat in musicCategories
-                  if cat.name === '豆瓣音乐250'
+                  if cat.name === '云瓣音乐250'
                     .billboard-hd.class-top
-                      h4 豆瓣音乐250
-                      a.more(href="/music/results?q=#{cat._id}&p=0" target="_blank") 更多
+                      h4 云瓣音乐250
+                      a.more(href="/music/results?q=#{cat.name}&p=0" target="_blank") 更多
                     .billboard-bd.clearfix
                       if cat.musics && cat.musics.length > 0
                         - var len = Math.min(9,cat.musics.length)

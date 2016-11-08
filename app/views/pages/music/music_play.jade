@@ -1,0 +1,24 @@
+head
+  meta(name="renderer" content="webkit")
+  meta(name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no")
+  title #{title}
+  link(href="/libs/css/music/music_play.min.css" rel="stylesheet")
+body
+  header
+    h1 ☁️瓣音乐
+    ul.type#type
+      li(data-type="dot") Dot
+      li.selected(data-type="column") Column
+    p Volume&nbsp;
+      input#volume(type="range" min="0" max="100" value="60")
+    .fork
+      .border
+        a(href="/musicPlay") 音乐小窝
+.left
+  ul#list
+    each item in musics
+      li(title=item) #{item}
+.right#box
+  script(src="/libs/scripts/js/music/MusicVisualizer.min.js")
+  script(src="/libs/scripts/js/music/playindex.min.js")
+

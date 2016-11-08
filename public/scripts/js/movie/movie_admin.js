@@ -64,7 +64,7 @@ $(function() {
 
 
 
-  // 电影分类同步豆瓣api数据鼠标离开事件
+  // 电影分类同步云瓣api数据鼠标离开事件
   $('#doubanMovie').blur(function() {
     var douban = $(this);
     var id = douban.val();
@@ -84,7 +84,7 @@ $(function() {
           $('#inputPoster').val(data.images.large);                 // 电影海报
           $('#inputYear').val(data.year);                           // 上映时间
           $('#inputSummary').val(data.summary);                     // 简介
-          $('#inputRating').val(data.rating.average);               // 豆瓣评分
+          $('#inputRating').val(data.rating.average);               // 云瓣评分
           if(data.countries) {
             var countries = '';
             data.countries.forEach(function(item, index) {

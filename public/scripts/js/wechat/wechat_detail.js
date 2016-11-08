@@ -5,7 +5,7 @@ $.support.cors = true;      // 解决IE8/9 Ajax跨域请求问题
 $(function() {
 
   // 设置微信电影评分图片的样式
-  // 获取该电影的豆瓣评分来设置图片的Y轴位置，显示相应评分对象的星星数
+  // 获取该电影的云瓣评分来设置图片的Y轴位置，显示相应评分对象的星星数
   var movieStar = Math.ceil($('.rating-num strong').html() - 10) * 15;
   console.log(movieStar);
   $('.star').css('background-position-y', movieStar);

@@ -10,7 +10,7 @@ exports.new = function *(next) {
   var cityCategories = yield CityCategory.find({}).exec();
   var cityProgrammes = yield CityProgramme.find({}).exec();
   yield this.render('pages/movie/movie_city_admin', {
-    title: '豆瓣电影后台影院录入页',
+    title: '云瓣电影后台影院录入页',
     logo: 'movie',
     city: {},
     cities: cities || [],
@@ -133,7 +133,7 @@ exports.list = function *(next) {
       .populate('cityProgramme', 'name')
       .exec();
   yield this.render('pages/movie/movie_city_list', {
-    title: '豆瓣电影影院分类列表页',
+    title: '云瓣电影影院分类列表页',
     cityCategoryList: cityCategoryList,
     logo: 'movie'
   })

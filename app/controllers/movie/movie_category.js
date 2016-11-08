@@ -7,7 +7,7 @@ var Movie = mongoose.model('Movie');
 // admin new page
 exports.new = function *(next) {
 	yield this.render('pages/movie/movie_category_admin', {
-		title: '豆瓣后台分类录入页',
+		title: '云瓣后台分类录入页',
 		logo: 'movie',
 		category: {}
 	});
@@ -33,7 +33,7 @@ exports.list = function *(next) {
 	// 通过movies属性查找电影分类所对应的电影名称
 	var categories = yield Category.find({}).populate({path:'movies',select:'title'}).exec();
   yield this.render('pages/movie/movie_category_list', {
-  	title: '豆瓣电影分类列表页',
+  	title: '云瓣电影分类列表页',
   	categories: categories,
 		logo: 'movie'
   });

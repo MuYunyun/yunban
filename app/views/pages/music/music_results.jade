@@ -1,0 +1,43 @@
+extends ../../layout
+
+block content
+  .container
+    .row
+      .panel.panel-success
+        .panel-heading
+          h4 #{keyword}
+        .panel-body
+          if musics && musics.length > 0
+            each item in musics
+              .col-md-2
+                .thumbnail
+                  a(href="/music/#{item._id}")
+                    if item.poster.indexOf('http') > -1
+                      img(src="#{item.poster}", alt="#{item.title}", style="height: 120px; width: 120px;")
+                    else
+                      img(src="/upload/music/#{item.poster}", alt="#{item.title}", style="height: 120px; width: 120px")
+                    .caption
+                      h5(style="overflow: hidden;white-space: nowrap;text-overflow:ellipses") #{item.title}
+          if musicCats && musicCats.length > 0
+            each item in musicCats
+              .panel.panel-info
+                .panel-heading
+                  a(href="/music/results?q=#{item.name}&p=0" style="text-decoration: none;")
+                    h5 #{item.name}
+                .panel-body
+                  each music in item.musics
+                    .col-md-2
+                      .thumbnail
+                        a(href="/music/#{music._id}")
+                          if music.poster.indexOf('http') > -1
+                            img(src="#{music.poster}", alt="#{music.title}", style="height: 120px; width: 120px;")
+                          else
+                            img(src="/upload/music/#{music.poster}", alt="#{music.title}", style="height: 120px; width: 120px")
+                        .caption
+                          h5(style="overflow: hidden;white-space: nowrap;text-overflow:ellipses") #{music.title}
+            //点击近期歌单时没有分页
+      if musics && musics.length > 0
+        div(style="margin: 0 auto;text-align: center;")
+          ul.pagination#page(data-currentPage = currentPage,data-totalPage = totalPage,data-query = query)
+  script(src="/libs/scripts/js/include/page.min.js")
+  script(src="/libs/scripts/js/music/music_results.min.js")

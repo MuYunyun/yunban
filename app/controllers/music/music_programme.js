@@ -16,13 +16,13 @@ exports.list = function *(next){
       })
       .exec();
   yield this.render('pages/music/music_programme_list', {
-    title: '豆瓣音乐热门歌单列表页',
+    title: '云瓣音乐热门歌单列表页',
     logo: 'music',               // 显示音乐logo
     programmes: programmes
   })
 };
 
-// 豆瓣音乐热门歌单列表页删除相应榜单名处理函数
+// 云瓣音乐热门歌单列表页删除相应榜单名处理函数
 exports.del = function *(next) {
   var id = this.request.query.id;
   if(id) {

@@ -78,7 +78,7 @@ $(function() {
             $('#inputMusicImage').val(data.image);                 // 海报
             $('#inputMusicSummary').val(data.summary);             // 歌曲简介
             if(data.rating) {
-              $('#inputMusicRating').val(data.rating.average);     // 豆瓣评分
+              $('#inputMusicRating').val(data.rating.average);     // 云瓣评分
             }
             if(data.attrs) {
               $('#inputMusicMedia').val(data.attrs.media);         // 介质

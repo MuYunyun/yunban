@@ -9,7 +9,7 @@ var MusicProgramme = mongoose.model('MusicProgramme');      // 引入近期热�
 exports.new = function *(next) {
   var musicProgramme = yield MusicProgramme.find({});
   yield this.render('pages/music/music_category_admin', {
-    title: '豆瓣后台音乐分类录入页',
+    title: '云瓣后台音乐分类录入页',
     logo: 'music',
     musicProgrammes:musicProgramme,
     musicCategory: {}
@@ -89,7 +89,7 @@ exports.list = function *(next) {
       .populate('musics', 'title')
       .exec();
   yield this.render('pages/music/music_category_list', {
-    title: '豆瓣音乐分类列表页',
+    title: '云瓣音乐分类列表页',
     logo: 'music',
     musicCategories: musicCategories
   })

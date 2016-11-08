@@ -15,7 +15,7 @@ var MusicSchema = new Schema({
   pubdate: String,           //发行时间
   summary: String,           //简介
   publisher: String,         //出版者
-  rating: String,            //豆瓣评分
+  rating: String,            //云瓣评分
   src: String,               //音乐地址
   pv: {                      //访问量
     type: Number,

@@ -5,7 +5,7 @@ block content
     .row
       form.form-horizontal(method="post", action="/admin/music", enctype="multipart/form-data")
         .form-group
-          label.col-sm-3.control-label 豆瓣音乐同步
+          label.col-sm-3.control-label 云瓣音乐同步
           .col-sm-6
             input#doubanMusic.form-control(type="text")
         if music._id
@@ -16,7 +16,7 @@ block content
             input#inputMusicCategory.form-control(type="text",name="musicCategoryName")
         .form-group
           label.col-sm-3.control-label 分类选择
-          .col-sm-6
+          .col-sm-6(style="height: 198px;overflow:auto;")
             each cat in musicCategories
               label.checkbox-inline
                 input(type="checkbox", name="musicCategory", value=cat._id)
@@ -66,7 +66,7 @@ block content
           .col-sm-6
             input#inputMusicPublisher.form-control(type="text",name="publisher",value=music.publisher)
         .form-group
-          label.col-sm-3.control-label(for="inputMusicRating") 豆瓣评分
+          label.col-sm-3.control-label(for="inputMusicRating") 云瓣评分
           .col-sm-6
             input#inputMusicRating.form-control(type="text",name="rating",value=music.rating)
         .form-group

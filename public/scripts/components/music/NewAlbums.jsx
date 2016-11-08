@@ -20,7 +20,7 @@ class NewAlbums extends React.Component {
     if (!this.state.loading) {        //加载完成
       let currentData = this.state.currentData;
       if (currentData && currentData.musics) {
-        var titleMore = "/music/results?q=" + currentData._id + "&p=0";
+        var titleMore = "/music/results?q=" + currentData.name + "&p=0";
         for(let item of currentData.musics) {
           newAlbumList.push(
             <NewAlbumItem data={item} key={item._id} />

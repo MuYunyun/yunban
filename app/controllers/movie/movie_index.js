@@ -105,7 +105,7 @@ exports.index = function *(next) {
 		}
 		var movies = categories.movies || [];
 		this.body = movies;
-	}else {         // 没有发送上面请求的则渲染豆瓣电影主页
+	}else {         // 没有发送上面请求的则渲染云瓣电影主页
 		var categories = yield Category
 				.find({})
 				.populate({
@@ -123,7 +123,7 @@ exports.index = function *(next) {
 				.populate('cityProgramme', 'name')
 				.exec();
 		yield this.render('pages/movie/movie_index', {
-			title: '豆瓣电影首页',
+			title: '云瓣电影首页',
 			logo: 'movie',
 			categories: categories,
 			cinemas: cinemas,
@@ -148,7 +148,7 @@ exports.search = function *(next) {
 		var results = movies.slice(index, index + count);      // 分类页面每页显示的电影数量
 
 		yield this.render('pages/movie/movie_results', {
-			title: '豆瓣电影结果列表页面',
+			title: '云瓣电影结果列表页面',
 			logo:'movie',                                        //显示电影logo
 			keyword: category.name,                              // 分类名称
 			currentPage: (page + 1),                             // 当前页
@@ -160,7 +160,7 @@ exports.search = function *(next) {
 		movies = category2.movies || [];                    // 分类中包含的电影
 		results = movies.slice(index, index + count);      // 分类页面每页显示的电影数量
 		yield this.render('pages/movie/movie_results', {
-			title: '豆瓣电影结果列表页面',
+			title: '云瓣电影结果列表页面',
 			logo:'movie',                                        //显示电影logo
 			keyword: category2.name,                              // 分类名称
 			currentPage: (page + 1),                             // 当前页
@@ -174,7 +174,7 @@ exports.search = function *(next) {
 		results = movies.slice(index, index + count);
 
 		  yield this.render('pages/movie/movie_results', {
-		  	title: '豆瓣电影搜索结果列表页面',
+		  	title: '云瓣电影搜索结果列表页面',
 				logo:'movie',
 		  	keyword: '共找到'+ num +'条与"' + q + '"相关的电影',
 		  	currentPage: (page + 1),
@@ -188,6 +188,6 @@ exports.search = function *(next) {
 	//电影广告链接页面
 exports.fullpage = function *(next) {
 	yield this.render('pages/movie/movie_fullpage', {
-		title: '豆瓣电影广告页面'
+		title: '云瓣电影广告页面'
 	});
 };

@@ -35,7 +35,7 @@ module.exports = function(router) {
 	router.get('/admin/user/list', User.signinRequired, User.adminRequired, User.list);
 	router.delete('/admin/user/list', User.signinRequired, User.adminRequired, User.del);
 
-	/*============ 豆瓣电影网站路由 ============*/
+	/*============ 云瓣电影网站路由 ============*/
 	// 电影主页路由
 	router.get('/movieIndex', MovieIndex.index);
 	// 首页电影搜索结果页
@@ -67,9 +67,14 @@ module.exports = function(router) {
 	router.delete('/admin/city/list', User.signinRequired, User.adminRequired, City.del);
 
 
-	/*============ 豆瓣音乐网站路由 ============*/
+	/*============ 云瓣音乐网站路由 ============*/
 	// 音乐主页路由
 	router.get('/musicIndex', MusicIndex.index);
+	//音乐播放全部路由
+	router.get('/musicPlay', MusicIndex.musicPlay);
+
+	// 首页电影搜索结果页
+	router.get('/music/results', MusicIndex.search);
 
 	// 音乐广告页路由
 	router.get('/gallery', MusicIndex.gallery);

@@ -113,7 +113,7 @@ exports.list = function *(next) {
 		.exec();
 
   yield this.render('pages/user/userlist', {
-  	title: '豆瓣电影用户列表页',
+  	title: '云瓣电影用户列表页',
 		logo: 'movie',
   	users: users
   });

@@ -7,7 +7,7 @@ var ObjectId = Schema.Types.ObjectId;
 var MovieSchema = new Schema({
 	director: String,          //导演
 	title: String,             //标题
-	doubanId: String,          //豆瓣ID
+	doubanId: String,          //云瓣ID
 	country: String,           //国家/地区
 	summary: String,           //简介
 	flash: String,             //片源地址
@@ -16,7 +16,7 @@ var MovieSchema = new Schema({
 	year: Number,              //上映年份
 	aka: String,               //又名
 	casts: String,             //主演
-	rating: String,            //豆瓣评分
+	rating: String,            //云瓣评分
 	pv: {                      //访问量
 		type: Number,
 		default: 0

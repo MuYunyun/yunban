@@ -21,7 +21,7 @@ exports.detail = function *(next) {
       .exec();
 
   yield this.render('pages/music/music_detail', {
-    title: '豆瓣音乐详情页',
+    title: '云瓣音乐详情页',
     music: music,
     logo: 'music',
     comments: MusicComments
@@ -38,7 +38,7 @@ exports.new = function *(next) {
       })
       .exec();
   yield this.render('pages/music/music_admin', {
-    title:'豆瓣音乐后台录入页',
+    title:'云瓣音乐后台录入页',
     logo:'music',
     music:{},
     musicCategories: musicCategories
@@ -91,7 +91,7 @@ exports.save = function *(next) {
             index = _oldCat.musics.indexOf(id);
             _oldCat.musics.splice(index, 1);
             yield _oldCat.save();
-            _newCat = yield MusicCategory.findOne({_id: musicCategoryId}).exec(); // 找到音乐对应的新电影分类
+            _newCat = yield MusicCategory.findOne({_id: musicCategoryId}).exec(); // 找到音乐对应的新音乐分类
             _newCat.musics.push(id);    // 将其id值添加到音乐分类的musics属性中并保存
             yield _newCat.save();
           }else{    //分类选择初始为多个
@@ -101,7 +101,7 @@ exports.save = function *(next) {
               _oldCat.musics.splice(index, 1);
               yield _oldCat.save();
             }
-            _newCat = yield MusicCategory.findOne({_id: musicCategoryId}).exec(); // 找到音乐对应的新电影分类
+            _newCat = yield MusicCategory.findOne({_id: musicCategoryId}).exec(); // 找到音乐对应的新音乐分类
             _newCat.musics.push(id);    // 将其id值添加到音乐分类的musics属性中并保存
             yield _newCat.save();
           }
@@ -113,7 +113,7 @@ exports.save = function *(next) {
             yield _oldCat.save();
           }
           for(i=0; i< musicCategoryId.length; i++){     //遍历该音乐新选择的所有分类
-            var _newCat = yield MusicCategory.findOne({_id: musicCategoryId[i]}).exec(); // 找到音乐对应的新电影分类
+            var _newCat = yield MusicCategory.findOne({_id: musicCategoryId[i]}).exec(); // 找到音乐对应的新音乐分类
             _newCat.musics.push(id);    // 将其id值添加到音乐分类的musics属性中并保存
             yield _newCat.save();
           }
@@ -122,7 +122,7 @@ exports.save = function *(next) {
     }else{       //如果刚开始类型一个也没有被选择的话
       if(musicCategoryId.length > 0) {    //如果选择了分类
         for(i=0; i< musicCategoryId.length; i++){     //遍历该音乐新选择的所有分类
-          _newCat = yield MusicCategory.findOne({_id: musicCategoryId[i]}).exec(); // 找到音乐对应的新电影分类
+          _newCat = yield MusicCategory.findOne({_id: musicCategoryId[i]}).exec(); // 找到音乐对应的新音乐分类
           _newCat.musics.push(id);    // 将其id值添加到音乐分类的musics属性中并保存
           yield _newCat.save();
         }
@@ -226,7 +226,7 @@ exports.list = function *(next) {
       .populate('musicCategory', 'name')
       .exec();
   yield this.render('pages/music/music_list', {
-    title: '豆瓣音乐列表页',
+    title: '云瓣音乐列表页',
     musics: musics,
     logo: 'music'
   });

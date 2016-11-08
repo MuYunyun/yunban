@@ -5,8 +5,8 @@ $.support.cors = true;                 // 解决IE8/9 Ajax跨域请求问题
 // 评论区提交评论点击事件
 $(function() {
 
-  // 设置豆瓣音乐评分图片的样式
-  // 获取该音乐的豆瓣评分来设置图片的Y轴位置，显示相应评分对象的星星数
+  // 设置云瓣音乐评分图片的样式
+  // 获取该音乐的云瓣评分来设置图片的Y轴位置，显示相应评分对象的星星数
   var musicStar = Math.ceil($('.rating-num strong').html() - 10) * 15;
   $('.star').css('background-position-y', musicStar);
 

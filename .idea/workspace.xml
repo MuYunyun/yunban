@@ -2,42 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b4dc3ed-4ea3-432f-8d8f-1d1d07618cfd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/120c52ed00e61c10a538b35b498020e4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/1555904a3ed0f25d93fafb91d409d99e.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/4f0b2bbd13d80bb56db798dffb9bf438.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/6fd1361a03f7cf3438b3aab6bc409c7e.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/707f3ac5e9fc103169b34fe0b01f59d3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/751053009988ada921063b9c976a0231.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/851d60748c878027e7a52c42c441b138.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/a3b5eb2fd4be679210afd738fcf8edb8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/ace3d5b785f01689d46740d26b55d68a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/bd63d00550899d17d96eab0e523e191a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/be1a90b6fc3184f6a923cb3720b92ec4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/c88397eabc61b0cd856c63dba9af15f6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/cdb0062838530082085a0dd3e2f0b1d1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/d751435c79f8947a09d2247b694c9f38.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/ed3b6061163c390a6c6a9aea559e6d06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/ffa5badd054f465bf879543954816c29.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/scripts/components/gallery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/scripts/components/music/galleryMain.jsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/207447ea6c0c9576dfbd6972f677b7aeee0231f8/gallery.scssc" afterPath="$PROJECT_DIR$/.sass-cache/207447ea6c0c9576dfbd6972f677b7aeee0231f8/gallery.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/includes/favicon.ico" afterPath="$PROJECT_DIR$/public/images/includes/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/movie/movieLogo.png" afterPath="$PROJECT_DIR$/public/images/movie/movieLogo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/music/musicLogo.png" afterPath="$PROJECT_DIR$/public/images/music/musicLogo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/images/includes/favicon.ico" afterPath="$PROJECT_DIR$/public/libs/images/includes/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/images/movie/movieLogo.png" afterPath="$PROJECT_DIR$/public/libs/images/movie/movieLogo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/images/music/musicLogo.png" afterPath="$PROJECT_DIR$/public/libs/images/music/musicLogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/api/music.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/music/music_play.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/music/music_results.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/sass/music/music_play.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/js/music/MusicVisualizer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/js/music/music_results.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/js/music/playindex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/207447ea6c0c9576dfbd6972f677b7aeee0231f8/music_index.scssc" afterPath="$PROJECT_DIR$/.sass-cache/207447ea6c0c9576dfbd6972f677b7aeee0231f8/music_index.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/music/gallery/2.jpg" afterPath="$PROJECT_DIR$/public/images/music/gallery/2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/music/gallery/5.jpg" afterPath="$PROJECT_DIR$/public/images/music/gallery/5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/images/music/gallery/2.jpg" afterPath="$PROJECT_DIR$/public/libs/images/music/gallery/2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/images/music/gallery/5.jpg" afterPath="$PROJECT_DIR$/public/libs/images/music/gallery/5.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/music/music_gallery.jade" afterPath="$PROJECT_DIR$/app/views/pages/music/music_gallery.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/movie/movie_category.js" afterPath="$PROJECT_DIR$/app/controllers/movie/movie_category.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/movie/movie_city.js" afterPath="$PROJECT_DIR$/app/controllers/movie/movie_city.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/movie/movie_index.js" afterPath="$PROJECT_DIR$/app/controllers/movie/movie_index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/music/music.js" afterPath="$PROJECT_DIR$/app/controllers/music/music.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/music/music_category.js" afterPath="$PROJECT_DIR$/app/controllers/music/music_category.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/music/music_comment.js" afterPath="$PROJECT_DIR$/app/controllers/music/music_comment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/music/music_index.js" afterPath="$PROJECT_DIR$/app/controllers/music/music_index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/music/music_programme.js" afterPath="$PROJECT_DIR$/app/controllers/music/music_programme.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/user/user.js" afterPath="$PROJECT_DIR$/app/controllers/user/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/schemas/movie/movie.js" afterPath="$PROJECT_DIR$/app/schemas/movie/movie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/schemas/music/music.js" afterPath="$PROJECT_DIR$/app/schemas/music/music.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/includes/header.jade" afterPath="$PROJECT_DIR$/app/views/includes/header.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/movie/movie_admin.jade" afterPath="$PROJECT_DIR$/app/views/pages/movie/movie_admin.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/movie/movie_detail.jade" afterPath="$PROJECT_DIR$/app/views/pages/movie/movie_detail.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/movie/movie_index.jade" afterPath="$PROJECT_DIR$/app/views/pages/movie/movie_index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/music/music_admin.jade" afterPath="$PROJECT_DIR$/app/views/pages/music/music_admin.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/music/music_detail.jade" afterPath="$PROJECT_DIR$/app/views/pages/music/music_detail.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/music/music_index.jade" afterPath="$PROJECT_DIR$/app/views/pages/music/music_index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/user/signin.jade" afterPath="$PROJECT_DIR$/app/views/pages/user/signin.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/user/signup.jade" afterPath="$PROJECT_DIR$/app/views/pages/user/signup.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/wechat/movie.jade" afterPath="$PROJECT_DIR$/app/views/wechat/movie.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.js" afterPath="$PROJECT_DIR$/config/routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/wechat.txt" afterPath="$PROJECT_DIR$/config/wechat.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/css/music/gallery.min.css" afterPath="$PROJECT_DIR$/public/libs/css/music/gallery.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/scripts/components/componentInit.min.js" afterPath="$PROJECT_DIR$/public/libs/scripts/components/componentInit.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/scripts/components/musicBundle.min.js" afterPath="$PROJECT_DIR$/public/libs/scripts/components/musicBundle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sass/music/gallery.scss" afterPath="$PROJECT_DIR$/public/sass/music/gallery.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/components/music/gallery.jsx" afterPath="$PROJECT_DIR$/public/scripts/components/music/gallery.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sass/music/music_index.scss" afterPath="$PROJECT_DIR$/public/sass/music/music_index.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/components/music/ArtistSongs.jsx" afterPath="$PROJECT_DIR$/public/scripts/components/music/ArtistSongs.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/components/music/HotProgrammeItem.jsx" afterPath="$PROJECT_DIR$/public/scripts/components/music/HotProgrammeItem.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/components/music/HotProgrammes.jsx" afterPath="$PROJECT_DIR$/public/scripts/components/music/HotProgrammes.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/components/music/NewAlbums.jsx" afterPath="$PROJECT_DIR$/public/scripts/components/music/NewAlbums.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/js/movie/movie_admin.js" afterPath="$PROJECT_DIR$/public/scripts/js/movie/movie_admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/js/movie/movie_detail.js" afterPath="$PROJECT_DIR$/public/scripts/js/movie/movie_detail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/js/music/music_admin.js" afterPath="$PROJECT_DIR$/public/scripts/js/music/music_admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/js/music/music_detail.js" afterPath="$PROJECT_DIR$/public/scripts/js/music/music_detail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/js/wechat/wechat_detail.js" afterPath="$PROJECT_DIR$/public/scripts/js/wechat/wechat_detail.js" />
     </list>
     <ignored path="movie_demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +70,60 @@
     <favorites_list name="movie_demo" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-173">
+              <caret line="73" column="36" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playindex.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/scripts/js/music/playindex.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="68" column="7" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MusicVisualizer.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/scripts/js/music/MusicVisualizer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="music_play.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pages/music/music_play.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="music_play.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/sass/music/music_play.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,21 +131,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/.jshintrc" />
-        <option value="$PROJECT_DIR$/app/models/music/music_category.js" />
-        <option value="$PROJECT_DIR$/app/schemas/music/music_category.js" />
-        <option value="$PROJECT_DIR$/app/schemas/music/music_programme.js" />
-        <option value="$PROJECT_DIR$/app/models/music/music_programme.js" />
-        <option value="$PROJECT_DIR$/app/models/music/music_comment.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/app/views/pages/movie/movie_list.jade" />
-        <option value="$PROJECT_DIR$/app/controllers/movie/movie_category.js" />
-        <option value="$PROJECT_DIR$/app/schemas/music/music.js" />
-        <option value="$PROJECT_DIR$/app/views/pages/music/music_category_list.jade" />
         <option value="$PROJECT_DIR$/app/views/pages/music/music_category_admin.jade" />
         <option value="$PROJECT_DIR$/app/controllers/music/music_category.js" />
-        <option value="$PROJECT_DIR$/app/views/pages/music/music_admin.jade" />
         <option value="$PROJECT_DIR$/app/views/includes/header.jade" />
         <option value="$PROJECT_DIR$/public/scripts/js/music/music_admin.js" />
         <option value="$PROJECT_DIR$/app/controllers/music/music_programme.js" />
@@ -90,25 +141,17 @@
         <option value="$PROJECT_DIR$/public/libs/scripts/components/musicBundle.min.js" />
         <option value="$PROJECT_DIR$/public/scripts/components/music/NewAlbumItem.jsx" />
         <option value="$PROJECT_DIR$/public/scripts/components/music/Title.jsx" />
-        <option value="$PROJECT_DIR$/public/scripts/components/music/NewAlbums.jsx" />
         <option value="$PROJECT_DIR$/public/scripts/components/music/HotProgramme.jsx" />
         <option value="$PROJECT_DIR$/app/views/pages/music/music_programme_list.jade" />
-        <option value="$PROJECT_DIR$/public/scripts/components/music/HotProgrammes.jsx" />
-        <option value="$PROJECT_DIR$/public/scripts/components/music/HotProgrammeItem.jsx" />
         <option value="$PROJECT_DIR$/app/views/pages/music/music_list.jade" />
         <option value="$PROJECT_DIR$/public/scripts/components/music/music_index.js" />
-        <option value="$PROJECT_DIR$/public/scripts/components/music/ArtistSongs.jsx" />
         <option value="$PROJECT_DIR$/public/scripts/components/music/ArtistSongItem.jsx" />
         <option value="$PROJECT_DIR$/public/sass/music/music_index.scss" />
         <option value="$PROJECT_DIR$/app/controllers/movie/movie.js" />
         <option value="$PROJECT_DIR$/public/scripts/js/music/music_detail.js" />
-        <option value="$PROJECT_DIR$/app/controllers/music/music_comment.js" />
-        <option value="$PROJECT_DIR$/app/controllers/music/music.js" />
         <option value="$PROJECT_DIR$/app/schemas/music/music_comment.js" />
         <option value="$PROJECT_DIR$/app/views/pages/music/music_detail.jade" />
         <option value="$PROJECT_DIR$/public/sass/include/detail.scss" />
-        <option value="$PROJECT_DIR$/config/routes.js" />
-        <option value="$PROJECT_DIR$/app/controllers/music/music_index.js" />
         <option value="$PROJECT_DIR$/public/scripts/components/music/gallery.js" />
         <option value="$PROJECT_DIR$/public/scripts/components/music/galleryMain.jsx" />
         <option value="$PROJECT_DIR$/public/data/imageDatas.json" />
@@ -117,7 +160,28 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/public/sass/music/gallery.scss" />
         <option value="$PROJECT_DIR$/app/views/pages/music/music_gallery.jade" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/app/controllers/movie/movie_category.js" />
+        <option value="$PROJECT_DIR$/app/controllers/music/music.js" />
+        <option value="$PROJECT_DIR$/app/controllers/music/music_comment.js" />
+        <option value="$PROJECT_DIR$/public/scripts/js/music/music_results.js" />
+        <option value="$PROJECT_DIR$/app/views/pages/movie/movie_results.jade" />
+        <option value="$PROJECT_DIR$/app/api/music.js" />
+        <option value="$PROJECT_DIR$/public/scripts/js/movie/movie_index.js" />
+        <option value="$PROJECT_DIR$/public/scripts/components/music/NewAlbums.jsx" />
+        <option value="$PROJECT_DIR$/app/views/pages/music/music_admin.jade" />
+        <option value="$PROJECT_DIR$/app/views/pages/music/music_results.jade" />
+        <option value="$PROJECT_DIR$/public/scripts/components/music/HotProgrammes.jsx" />
+        <option value="$PROJECT_DIR$/public/scripts/components/music/HotProgrammeItem.jsx" />
         <option value="$PROJECT_DIR$/app/views/pages/music/music_index.jade" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/config/routes.js" />
+        <option value="$PROJECT_DIR$/app/controllers/music/music_index.js" />
+        <option value="$PROJECT_DIR$/public/scripts/components/music/ArtistSongs.jsx" />
+        <option value="$PROJECT_DIR$/app/views/pages/music/music_play.jade" />
+        <option value="$PROJECT_DIR$/public/sass/music/music_play.scss" />
+        <option value="$PROJECT_DIR$/public/scripts/js/music/playindex.js" />
+        <option value="$PROJECT_DIR$/public/scripts/js/music/MusicVisualizer.js" />
       </list>
     </option>
   </component>
@@ -166,9 +230,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="77" />
-    <option name="y" value="20" />
-    <option name="width" value="1273" />
+    <option name="x" value="91" />
+    <option name="y" value="27" />
+    <option name="width" value="1234" />
     <option name="height" value="797" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -197,7 +261,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,7 +307,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,37 +329,139 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="movie_wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="movie_wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -373,11 +542,30 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie_wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,6 +579,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -473,26 +662,27 @@
       <workItem from="1478066552977" duration="2300000" />
       <workItem from="1478068958528" duration="42949000" />
       <workItem from="1478167971132" duration="34804000" />
-      <workItem from="1478256933189" duration="34546000" />
+      <workItem from="1478256933189" duration="63491000" />
+      <workItem from="1478524162999" duration="6000" />
+      <workItem from="1478524172135" duration="39817000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248922000" />
+    <option name="totallyTimeSpent" value="317690000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="77" y="20" width="1273" height="797" extended-state="0" />
+    <frame x="91" y="27" width="1234" height="797" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20274636" sideWeight="0.37571427" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22923322" sideWeight="0.6242857" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20774938" sideWeight="0.6242857" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23854448" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2609929" sideWeight="0.50319487" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2141844" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41276595" sideWeight="0.4968051" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -500,6 +690,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23829788" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -516,293 +707,25 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/public/scripts/js/movie/movie_index.js</url>
-          <line>22</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/NewAlbumItem.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/music/music_list.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/music/music_programme_list.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/images/music/gallery/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/music/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/Title.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/sass/music/music_index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8757">
-          <caret line="417" column="28" selection-start-line="417" selection-start-column="28" selection-end-line="417" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/movie/movie_detail.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/music/banner_arrow.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/movie/movie_comment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/music/music_comment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/js/movie/movie_detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="29" column="43" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/music/music.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/js/music/music_detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/music/music_comment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/schemas/music/music_comment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/sass/include/detail.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/movie/movie_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="192" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/music/music_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="107" column="21" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/ArtistSongItem.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/movie/movie_admin.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1231">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/movie/movie_results.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-97">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/music/music_category_list.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="26" column="55" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="59" column="49" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/sass/movie/movie_index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3176">
-          <caret line="421" column="18" selection-start-line="421" selection-start-column="4" selection-end-line="421" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/css/music/gallery.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/music/music_detail.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="63" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/ArtistSongs.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/movie/movie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/music/react/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/images/music/react/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/music/react/1.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/libs/images/music/react/1.jpg" />
     <entry file="file://$PROJECT_DIR$/public/libs/scripts/components/gallery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-26292">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/NewAlbums.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1166">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/galleryMain.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/galleryMain.jsx" />
     <entry file="file://$PROJECT_DIR$/public/libs/scripts/components/musicBundle.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3675">
           <caret line="0" column="138" selection-start-line="0" selection-start-column="138" selection-end-line="0" selection-end-column="138" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/HotProgrammeItem.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="43" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,7 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
           <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,15 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,25 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/HotProgrammes.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/sass/music/gallery.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="225" selection-start-line="2" selection-start-column="225" selection-end-line="2" selection-end-column="225" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -870,23 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/includes/header.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/includes/head.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -894,23 +771,299 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="61" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/movie/movie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4541">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/movie/movie_category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/music/music.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/music/music_comment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/movie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="128" column="54" selection-start-line="128" selection-start-column="54" selection-end-line="128" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/js/movie/movie_results.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/movie/movie_results.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/movie/movie_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="141" column="26" selection-start-line="141" selection-start-column="25" selection-end-line="141" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/js/movie/movie_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2240">
+          <caret line="184" column="96" selection-start-line="184" selection-start-column="96" selection-end-line="184" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/NewAlbums.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="22" column="72" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/text.jsx" />
+    <entry file="file://$PROJECT_DIR$/app/api/music.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/HotProgrammeItem.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/music/music_gallery.jade">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/music/music_results.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="24" column="59" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/includes/head.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/libs/scripts/js/music/music_results.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/sass/music/gallery.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1147">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/sass/music/music_index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/includes/header.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/music/music_admin.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/movie/movie_index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="35" column="65" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/util.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/js/music/music_detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/js/music/music_results.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="59" column="27" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/music/music_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="185" column="8" selection-start-line="185" selection-start-column="8" selection-end-line="185" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/music/music_index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-566">
-          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+        <state relative-caret-position="165">
+          <caret line="81" column="19" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-173">
+          <caret line="73" column="36" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/HotProgrammes.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="40" column="33" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/components/music/ArtistSongs.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/sass/music/music_play.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/music/music_play.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/js/music/playindex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="68" column="7" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/js/music/MusicVisualizer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
