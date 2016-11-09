@@ -58,6 +58,10 @@ block content
           .col-sm-6
             input#inputMusicSrc.form-control(type="text", name="src", value=music.src)
         .form-group
+          label.col-sm-3.control-label(for="uploadMusic") 音乐上传
+          .col-sm-6
+            input#uploadMusic(type="file",name="uploadMusic")
+        .form-group
           label.col-sm-3.control-label(for="inputMusicPubdate") 发行时间
           .col-sm-6
             input#inputMusicPubdate.form-control(type="text",name="pubdate", value=music.pubdate)

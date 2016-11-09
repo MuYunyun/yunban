@@ -69,6 +69,25 @@ exports.savePoster = function *(next) {     //文件上传
   yield next;
 };
 
+// admin music
+exports.saveMusic = function *(next) {     //文件上传
+  // 如果有文件上传通过koa-body中间件生成临时文件并通过this.request.body.files进行访问
+  // 当提交表单中有文件上传请求时表单要使用enctype="multipart/form-data"编码格式
+  var musicData = this.request.body.files.uploadMusic;        // 上传音乐文件
+  var filePath = musicData.path;                              // 文件路径
+  var name = musicData.name;                                  // 原始名字
+
+  if (name) {  //本地上传的
+    var data = yield util.readFileAsync(filePath);
+    var newPath = path.join(__dirname, '../../../', '/public/media/music/' + name);
+
+    yield util.writeFileAsync(newPath, data);
+
+    this.src = name;  // 音乐播放地址
+  }
+  yield next;
+};
+
 //后台录入控制器
 exports.save = function *(next) {
   var musicObj = this.request.body.fields || {};
@@ -80,8 +99,12 @@ exports.save = function *(next) {
   if (this.poster) {          // 如果有自定义上传海报  将movieObj中的海报地址改成自定义上传海报的地址
     musicObj.poster = this.poster;
   }
-  if(id){       // 如果id值存在，则说明是对已存在的数据进行更新
 
+  if(this.src) {              // 如果有自定义上传音乐,则将本地地址传入
+    musicObj.src = this.src;
+  }
+
+  if(id){       // 如果id值存在，则说明是对已存在的数据进行更新
     var music = yield Music.findOne({_id: id}).exec();
     if (music.musicCategory) {       //如果刚开始类型有被选择的话
       if (musicCategoryId.toString() !== music.musicCategory.toString()) {  // 如果修改音乐分类
@@ -136,8 +159,6 @@ exports.save = function *(next) {
 
     this.redirect('/admin/music/list');
     //this.redirect('/music/' + _music._id); //重定向
-
-
 
   }else if(musicObj.title) {   // 如果表单中填写了音乐名称 则查找该音乐名称是否已存在
     // 查找该音乐名称是否已存在

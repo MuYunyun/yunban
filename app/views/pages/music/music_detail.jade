@@ -36,8 +36,11 @@ block content
           h4 #{music.title}歌曲简介&nbsp;.&nbsp;.&nbsp;.&nbsp;.
           p.intro #{music.summary}
       .detail-header.col-md-5.col-xs-6
-        - var musicSrc = music.src ? music.src : ''
-        audio(src=musicSrc controls autoplay)
+        if music.src.indexOf('http') > -1
+          audio(src=music.src controls autoplay)
+        else
+          // 音乐为自行上传
+          audio(src="/media/music/#{music.src}" controls autoplay)
     .row
       .detail-content.col-md-6.col-md-offset-1.col-xs-6
         .panel.panel-defatul

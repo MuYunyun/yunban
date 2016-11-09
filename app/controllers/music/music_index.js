@@ -185,10 +185,19 @@ exports.gallery = function *(next) {
 
 //播放全部音乐
 exports.musicPlay = function *(next) {
-  var media = path.join(__dirname, '../../../public/media');
-  var names = fs.readdirSync(media);
+  //var media = path.join(__dirname, '../../../public/media/music');
+  //var names = fs.readdirSync(media);
+  var catName = this.request.query.catName;      // 获取本周单曲榜区分类请求名称
+  var musicCategory = yield MusicCategory
+      .findOne({name: catName})
+      .populate({
+        path: 'musics',
+        select: 'title src',
+        options: {limit: 10,sort:{pv: -1}}
+      })
+      .exec();
   yield this.render('pages/music/music_play', {
     title: '云瓣音乐',
-    musics: names
+    musicCategories: musicCategory     //音乐名字
   });
 };

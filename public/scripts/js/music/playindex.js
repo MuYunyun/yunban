@@ -23,7 +23,7 @@ for (var i = 0; i < lis.length; i++) {
       lis[j].className = "";
     }
     this.className = "selected";
-    mv.play("/media/" + this.title);
+    mv.play("/media/music/" + this.title);
   }
 }
 
@@ -117,7 +117,7 @@ function draw() { // 绘制矩形函数
 }
 
 /* 切换柱状图或者点状的展现 */
-draw.type = "column"; // 在draw函数上绑定一个属性，默认展现柱状图
+draw.type = "dot"; // 在draw函数上绑定一个属性，默认展现柱状图
 var types = $("#type li");
 for (var i = 0; i < types.length; i++) {
   types[i].onclick = function() {

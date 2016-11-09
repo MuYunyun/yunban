@@ -20,6 +20,7 @@ class HotArtistSongs extends React.Component {
     if (!this.state.loading) {        //加载完成
       let currentData = this.state.currentData;
       if (currentData && currentData.musics) {
+        var playAll = "/musicPlay?catName=" + currentData.name;  // 播放全部
         for(let i = 0; i < currentData.musics.length; i++){
           artistList.push(
             <ArtistSongItem data={currentData.musics[i]} key={currentData.musics[i]._id} value={i+1} />
@@ -31,7 +32,7 @@ class HotArtistSongs extends React.Component {
         <div className="billboard">
           <div className="billboard-hd">
             <h4>本周单曲榜</h4>
-            <a href="/musicPlay">
+            <a href={playAll}>
               <button className="play-button">
                 <i className="glyphicon glyphicon-play"></i>
                 <span>播放全部</span>

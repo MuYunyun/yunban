@@ -81,7 +81,7 @@ module.exports = function(router) {
 
 	// 音乐详细页面路由
 	router.get('/music/:id', Music.detail);
-	router.post('/admin/music', User.signinRequired, User.adminRequired, koaBody({multipart: true}), Music.savePoster, Music.save);
+	router.post('/admin/music', User.signinRequired, User.adminRequired, koaBody({multipart: true}), Music.savePoster, Music.saveMusic, Music.save);
 	router.get('/admin/music/new', User.signinRequired, User.adminRequired, Music.new);
 	router.get('/admin/music/update/:id', User.signinRequired, User.adminRequired, Music.update);
 	router.get('/admin/music/list', User.signinRequired, User.adminRequired, Music.list);
