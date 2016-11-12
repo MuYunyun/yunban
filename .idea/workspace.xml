@@ -2,95 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b4dc3ed-4ea3-432f-8d8f-1d1d07618cfd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/5.mp4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/data/imageDatas.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/movie/footer/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/movie/fullpage/qsmy2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/movie/middleImg/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/footer/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/music/galleryr/9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/css/music/gallery.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/movie/advertisements/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/movie/advertisements/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/movie/footer/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/movie/fullpage/qsmy2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/movie/middleImg/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/advertisements/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/advertisements/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/footer/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/images/music/galleryr/9.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/pages/music/music_gallery.jade" afterPath="$PROJECT_DIR$/app/views/pages/movie/movie_gallery.jade" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/sass/music/gallery.scss" afterPath="$PROJECT_DIR$/public/sass/movie/gallery.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/34eef716f8eec9896b35223daffccc8005c21c4f/header.scssc" afterPath="$PROJECT_DIR$/.sass-cache/34eef716f8eec9896b35223daffccc8005c21c4f/header.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/4e12165c98e9becfd094b659850c813844f40bf7/fullpage.scssc" afterPath="$PROJECT_DIR$/.sass-cache/4e12165c98e9becfd094b659850c813844f40bf7/fullpage.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/movie/galleryFrames/1.jpg" afterPath="$PROJECT_DIR$/public/images/movie/galleryFrames/1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/movie/galleryFrames/2.jpg" afterPath="$PROJECT_DIR$/public/images/movie/galleryFrames/2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/movie/galleryFrames/3.jpg" afterPath="$PROJECT_DIR$/public/images/movie/galleryFrames/3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/movie/galleryFrames/4.jpg" afterPath="$PROJECT_DIR$/public/images/movie/galleryFrames/4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/images/movie/galleryFrames/1.jpg" afterPath="$PROJECT_DIR$/public/libs/images/movie/galleryFrames/1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/images/movie/galleryFrames/2.jpg" afterPath="$PROJECT_DIR$/public/libs/images/movie/galleryFrames/2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/images/movie/galleryFrames/3.jpg" afterPath="$PROJECT_DIR$/public/libs/images/movie/galleryFrames/3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/images/movie/galleryFrames/4.jpg" afterPath="$PROJECT_DIR$/public/libs/images/movie/galleryFrames/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/show/movie.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/movie/movie.js" afterPath="$PROJECT_DIR$/app/controllers/movie/movie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/movie/movie_index.js" afterPath="$PROJECT_DIR$/app/controllers/movie/movie_index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/music/music_index.js" afterPath="$PROJECT_DIR$/app/controllers/music/music_index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/user/user.js" afterPath="$PROJECT_DIR$/app/controllers/user/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/includes/header.jade" afterPath="$PROJECT_DIR$/app/views/includes/header.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout.jade" afterPath="$PROJECT_DIR$/app/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/movie/movie_admin.jade" afterPath="$PROJECT_DIR$/app/views/pages/movie/movie_admin.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/movie/movie_detail.jade" afterPath="$PROJECT_DIR$/app/views/pages/movie/movie_detail.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/movie/movie_index.jade" afterPath="$PROJECT_DIR$/app/views/pages/movie/movie_index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/music/music_detail.jade" afterPath="$PROJECT_DIR$/app/views/pages/music/music_detail.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/music/music_index.jade" afterPath="$PROJECT_DIR$/app/views/pages/music/music_index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/user/signin.jade" afterPath="$PROJECT_DIR$/app/views/pages/user/signin.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/user/userlist.jade" afterPath="$PROJECT_DIR$/app/views/pages/user/userlist.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.js" afterPath="$PROJECT_DIR$/config/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/wechat.txt" afterPath="$PROJECT_DIR$/config/wechat.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/css/include/header.min.css" afterPath="$PROJECT_DIR$/public/libs/css/include/header.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/css/movie/fullpage.min.css" afterPath="$PROJECT_DIR$/public/libs/css/movie/fullpage.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/scripts/components/gallery.min.js" afterPath="$PROJECT_DIR$/public/libs/scripts/components/gallery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/scripts/components/musicBundle.min.js" afterPath="$PROJECT_DIR$/public/libs/scripts/components/musicBundle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/scripts/js/user/user_main.min.js" afterPath="$PROJECT_DIR$/public/libs/scripts/js/user/user_main.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sass/include/header.scss" afterPath="$PROJECT_DIR$/public/sass/include/header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sass/movie/fullpage.scss" afterPath="$PROJECT_DIR$/public/sass/movie/fullpage.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/components/music/ArtistSongs.jsx" afterPath="$PROJECT_DIR$/public/scripts/components/music/ArtistSongs.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/components/music/gallery.jsx" afterPath="$PROJECT_DIR$/public/scripts/components/music/gallery.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/components/music/music_index.js" afterPath="$PROJECT_DIR$/public/scripts/components/music/music_index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/js/user/user_main.js" afterPath="$PROJECT_DIR$/public/scripts/js/user/user_main.js" />
     </list>
     <ignored path="movie_demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -126,8 +39,8 @@
       <file leaf-file-name="movie.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/schemas/movie/movie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+            <state relative-caret-position="378">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -458,25 +371,25 @@
       <workItem from="1478167971132" duration="34804000" />
       <workItem from="1478256933189" duration="63491000" />
       <workItem from="1478524162999" duration="6000" />
-      <workItem from="1478524172135" duration="127136000" />
+      <workItem from="1478524172135" duration="127438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="405009000" />
+    <option name="totallyTimeSpent" value="405311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="91" y="47" width="1216" height="770" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20274636" sideWeight="0.37571427" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23430963" sideWeight="0.6242857" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23430963" sideWeight="0.6242857" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2609929" sideWeight="0.50319487" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.320059" sideWeight="0.4968051" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.320059" sideWeight="0.4968051" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -761,7 +674,7 @@
         <state relative-caret-position="1491">
           <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -787,7 +700,7 @@
         <state relative-caret-position="63">
           <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -902,8 +815,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/schemas/movie/movie.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        <state relative-caret-position="378">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding />
         </state>
       </provider>
