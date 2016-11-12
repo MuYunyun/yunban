@@ -87,6 +87,25 @@ exports.savePoster = function *(next) {     //文件上传
 	yield next;
 };
 
+// admin movie
+exports.saveMovie = function *(next) {     //文件上传
+	// 如果有文件上传通过koa-body中间件生成临时文件并通过this.request.body.files进行访问
+	// 当提交表单中有文件上传请求时表单要使用enctype="multipart/form-data"编码格式
+	var movieData = this.request.body.files.uploadMovie;        // 上传电影文件
+	var filePath = movieData.path;                              // 文件路径
+	var name = movieData.name;                                  // 原始名字
+
+	if (name) {  //本地上传的
+		var data = yield util.readFileAsync(filePath);
+		var newPath = path.join(__dirname, '../../../', '/public/media/movie/' + name);
+
+		yield util.writeFileAsync(newPath, data);
+
+		this.flash = name;  // 电影放映地址
+	}
+	yield next;
+};
+
 //后台录入控制器
 exports.save = function *(next) {
 	var movieObj = this.request.body.fields || {};
@@ -96,6 +115,9 @@ exports.save = function *(next) {
 	var _categoryName;
 	if (this.poster) {          // 如果有自定义上传海报  将movieObj中的海报地址改成自定义上传海报的地址
 		movieObj.poster = this.poster;
+	}
+	if(this.flash) {              // 如果有自定义上传电影,则将本地地址传入
+		movieObj.flash = this.flash;
 	}
 
 	if(movieObj._id) {  //如果数据已存在，则更新相应修改的字段

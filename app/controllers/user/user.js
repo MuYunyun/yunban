@@ -18,17 +18,20 @@ exports.captcha = function *(next) {
 // signup
 exports.showSignup = function *(next) {
   yield this.render('pages/user/signup', {
-  	title: '注册页面'
+  	title: '注册页面',
+		logo: 'movie'
   });
 };
 
 // signin
 exports.showSignin = function *(next) {
   yield this.render('pages/user/signin', {
-  	title: '登录页面'
+  	title: '登录页面',
+		logo: 'movie'
   });
 };
 
+// 注册页面
 exports.signup =  function *(next) {
 	var use = this.request.body.user;  //获取表单的数据
 	var _user = {};
@@ -36,7 +39,7 @@ exports.signup =  function *(next) {
 	for(var i = 0; i < use.length; i++){
 		var p = use[i].indexOf('='),
 				name = use[i].substring(0,p),
-				value = use[i].substring(p+1);
+				value = decodeURI(use[i].substring(p+1));
 		_user[name] = value;
 	}
 	var _name = _user.name || '',
@@ -61,7 +64,7 @@ exports.signup =  function *(next) {
   }
 };
 
-// signin
+// 登录页面
 exports.signin = function *(next) {
 	var use = this.request.body.user;  //获取表单的数据
 	var _user = {};
@@ -69,7 +72,7 @@ exports.signin = function *(next) {
 	for(var i = 0; i < use.length; i++){
 		var p = use[i].indexOf('='),
 				name = use[i].substring(0,p),
-				value = use[i].substring(p+1);
+				value = decodeURI(use[i].substring(p+1));
 		_user[name] = value;
 	}
 	var _name = _user.name || '',

@@ -73,7 +73,7 @@ block content
                       p #{item.content}
                       span.creatAt #{moment(item.meta.createAt).format('MM-DD HH:mm')} &nbsp;&nbsp;&nbsp;&nbsp;
                       a.comment(href="#comments", data-cid="#{item._id}", data-tid="#{item.from._id}") 回复
-                      if user && item.from.name === user.name
+                      if user && item.from.name === user.name || user && user.role > 10
                         a.comment-del(href="javascript:;" data-cid="#{item._id}") &nbsp;|&nbsp;删除
                       if item.reply && item.reply.length > 0
                         each reply in item.reply
@@ -88,7 +88,7 @@ block content
                               p #{reply.content}
                               span.createAt #{moment(reply.meta.createAt).format('MM-DD HH:mm')} &nbsp;&nbsp;&nbsp;&nbsp;
                               a.comment(href="#comments", data-cid="#{item._id}", data-tid="#{reply.from._id}") 回复
-                              if user && reply.from.name == user.name
+                              if user && reply.from.name == user.name || user && user.role > 10
                                 a.comment-del(href="javascript:;" data-cid="#{item._id}" data-did="#{reply._id}") &nbsp;|&nbsp;删除
                     hr
   script(src="/libs/scripts/js/music/music_detail.min.js")

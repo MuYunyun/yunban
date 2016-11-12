@@ -176,12 +176,6 @@ exports.search = function *(next) {
   }
 };
 
-//音乐广告链接页面
-exports.gallery = function *(next) {
-  yield this.render('pages/music/music_gallery', {
-    title: '云瓣音乐广告页面'
-  });
-};
 
 //播放全部音乐
 exports.musicPlay = function *(next) {

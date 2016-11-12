@@ -81,7 +81,7 @@ $(function() {
                     $(obj).find('button:contains("登录")').addClass('btn-danger').attr('disabled', 'true');
                     break;
                   default:
-                    $('a')[0].click();                  // 注册成功 点击电影首页按钮进入电影首页
+                    $('a')[0].click();                 // 登录成功
                 }
               });
         },
@@ -143,7 +143,6 @@ $(function() {
             }
           })
               .done(function(results) {
-                console.log(results);
                 switch (results.data){
                   case 0:
                     // 用户名已存在
@@ -161,7 +160,7 @@ $(function() {
                     $(obj).find('button:contains("注册")').addClass('btn-danger').attr('disabled', 'true');
                     break;
                   default:
-                    $('a')[0].click();                  // 注册成功 点击电影首页按钮进入电影首页
+                    $('a')[0].click();                 // 注册成功
                 }
               });
         },

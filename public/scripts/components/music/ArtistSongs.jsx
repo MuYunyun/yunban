@@ -23,7 +23,7 @@ class HotArtistSongs extends React.Component {
         var playAll = "/musicPlay?catName=" + currentData.name;  // 播放全部
         for(let i = 0; i < currentData.musics.length; i++){
           artistList.push(
-            <ArtistSongItem data={currentData.musics[i]} key={currentData.musics[i]._id} value={i+1} />
+              <ArtistSongItem data={currentData.musics[i]} key={currentData.musics[i]._id} value={i+1} />
           );
         }
       }
@@ -69,6 +69,7 @@ class HotArtistSongs extends React.Component {
     // 如果data中没有该数据则通过Ajax请求并保持
     let url = this.props.source + encodeURIComponent('本周单曲榜' + value);
     $.get(url, (results) => {
+      console.log(results);
       this.setState({
         loading: false,
         selected: value,

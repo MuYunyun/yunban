@@ -1,19 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-//获取图片相关数据
-var imageDatas = require('../../../data/imageDatas.json');
-// let yeomanImage = require('../images/yeoman.png');
-//利用自执行函数,讲图片名信息转成图片URL路径信息
-function getImageUrl(imageDataArr) {
-  for (var i = 0; i < imageDataArr.length; i++) {
-    var singeImageData = imageDataArr[i];
-    singeImageData.imageUrl = require('../../../libs/images/music/galleryr/' + singeImageData.fileName);
-    imageDataArr[i] = singeImageData;
-  }
-  return imageDataArr;
-}
-imageDatas = getImageUrl(imageDatas);
+/* 原来从json文件里获取数据 */
+// var imageDatas = require('../../../data/imageDatas.json');
+// //利用自执行函数,讲图片名信息转成图片URL路径信息
+// function getImageUrl(imageDataArr) {
+//   for (var i = 0; i < imageDataArr.length; i++) {
+//     var singeImageData = imageDataArr[i];
+//     singeImageData.imageUrl = require('../../../libs/images/music/galleryr/' + singeImageData.fileName);
+//     imageDataArr[i] = singeImageData;
+//   }
+//   return imageDataArr;
+// }
+// imageDatas = getImageUrl(imageDatas);
+
+// 通过Ajax获取后台的数据
+$.get("/galleryData", function(results){
+  var imageDatas = results.data;
+
 
 /*
  * 获取区间内的一个随机值
@@ -69,13 +73,14 @@ var ImgFigure = React.createClass({
 
     return (
         <figure className={imgFigureClassName} style={styleObj} onClick={this.handleClick}>
-          <img src={this.props.data.imageUrl}
+          <img src={this.props.data.poster}
                alt={this.props.data.title}/>
           <figcaption>
             <h2 className="img-title">{this.props.data.title}</h2>
+            {/*<a href={'/movie/' +this.props.data._id}>进入</a>*/}
             <div className="img-back" onClick={this.handleClick}>
               <p>
-                {this.props.data.desc}
+                {this.props.data.summary}
               </p>
             </div>
           </figcaption>
@@ -295,6 +300,7 @@ var AppComponent = React.createClass({
   render: function() {
     var controllerUnits = [],
         imgFigures = [];
+
     imageDatas.forEach(function(value, index) {
       if (!this.state.imgsArrangeArr[index]) {
         this.state.imgsArrangeArr[index] = {
@@ -329,3 +335,4 @@ var AppComponent = React.createClass({
 });
 
 ReactDOM.render(<AppComponent />, document.getElementById('app'));
+});

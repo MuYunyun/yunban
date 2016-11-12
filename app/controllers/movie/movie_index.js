@@ -6,7 +6,8 @@ var mongoose = require('mongoose'),
 		City = mongoose.model('City'),                     // 引入电影院城市模型
 		CityProgramme = mongoose.model('CityProgramme'),   // 电影院城市分类归档模型
 		CityCategory = mongoose.model('CityCategory'),     // 电影院城市分类模型
-		Category = mongoose.model('Category');             // 电影分类模型
+		Category = mongoose.model('Category'),             // 电影分类模型
+		Film = mongoose.model('Movie');                    // 电影模型
 
 // index page
 exports.index = function *(next) {
@@ -190,4 +191,19 @@ exports.fullpage = function *(next) {
 	yield this.render('pages/movie/movie_fullpage', {
 		title: '云瓣电影广告页面'
 	});
+};
+
+//电影画廊页面
+exports.gallery = function *(next) {
+	yield this.render('pages/movie/movie_gallery', {
+		title: '云瓣电影画廊',
+	});
+};
+
+//返回画廊数据(如果以后要增加个分类的画廊数据则和上面合并)
+exports.galleryData = function *(next) {
+	var movies = yield Film
+			.find({}).limit(16)
+			.exec();
+	this.body = {data: movies};
 };

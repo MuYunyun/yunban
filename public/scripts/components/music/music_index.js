@@ -73,7 +73,7 @@ $(function() {
       $oDots.on('click', 'li', function() {
         $(this).addClass('slide-active').siblings().removeClass('slide-active');
         var pageDiff = $(this).text() - page;  // 获取需要滚动的页数
-        page = $(this).text();  //将当前点击也赋值给page变量
+        page = parseInt($(this).text());  //将当前点击也赋值给page变量
         $oUl.animate({
           left: '-=' + oCol6_width * pageDiff
         }, 300);   // 滚动到当前点击页

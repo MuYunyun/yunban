@@ -38,7 +38,10 @@ block content
 					p.intro #{movie.summary}
 			.detail.col-md-6.col-xs-6
 				if movie.flash
-					embed(src="#{movie.flash}", allowFullScreen="true", quality="high", width="100%", height="400", align="middle", allowScriptAcess="always", type="application/x-shockwave-flash")
+					if movie.flash.indexOf('http') > -1
+						embed(src="#{movie.flash}", allowFullScreen="true", quality="high", width="100%", height="400", align="middle", allowScriptAcess="always", type="application/x-shockwave-flash")
+					else
+						embed(src="/media/movie/#{movie.flash}", allowFullScreen="true", quality="high", width="100%", height="400", align="middle", allowScriptAcess="always", type="application/x-shockwave-flash")
 				else if movie.poster.indexOf('http') > -1
 					img(src="#{movie.poster}", alt="#{movie.title}",width="100%",height="600")
 				else
@@ -75,7 +78,7 @@ block content
 											p #{item.content}
 											span.creatAt #{moment(item.meta.createAt).format('MM-DD HH:mm')} &nbsp;&nbsp;&nbsp;&nbsp;
 											a.comment(href="#comments", data-cid="#{item._id}", data-tid="#{item.from._id}") 回复
-											if user && item.from.name === user.name
+											if user && item.from.name === user.name || user && user.role > 10
 												a.comment-del(href="javascript:;" data-cid="#{item._id}") &nbsp;|&nbsp;删除
 											if item.reply && item.reply.length > 0
 												each reply in item.reply
@@ -90,7 +93,7 @@ block content
 															p #{reply.content}
 															span.createAt #{moment(reply.meta.createAt).format('MM-DD HH:mm')} &nbsp;&nbsp;&nbsp;&nbsp;
 															a.comment(href="#comments", data-cid="#{item._id}", data-tid="#{reply.from._id}") 回复
-															if user && reply.from.name == user.name
+															if user && reply.from.name == user.name || user && user.role > 10
 																a.comment-del(href="javascript:;" data-cid="#{item._id}" data-did="#{reply._id}") &nbsp;|&nbsp;删除
 
 										hr
