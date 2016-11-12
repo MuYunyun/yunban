@@ -47,6 +47,7 @@
   <img src="http://oegv7uazl.bkt.clouddn.com/yanshi.gif"  height="700" alt="电影手机网页端"/>
 <img src="http://oegv7uazl.bkt.clouddn.com/yunban/movie.gif" alt="云瓣电影"/>
 <img src="http://oegv7uazl.bkt.clouddn.com/yunban/music.gif" alt="云瓣电影"/>
+如果加载不出来<a href="http://oegv7uazl.bkt.clouddn.com/yunban/movie.gif" target="\_blank">点我看电影演示</a>、<a href="http://oegv7uazl.bkt.clouddn.com/yunban/music.gif" target="\_blank">点我看音乐演示</a>、
 
 项目页面:
 -------
