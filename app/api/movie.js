@@ -2,6 +2,7 @@
 
 var mongoose = require('mongoose');
 var Movie = mongoose.model('Movie');
+var Music = mongoose.model('Music');
 var co = require('co'); //用同步的方式编写异步的代码
 var Promise = require('bluebird');
 var koa_request = require('koa-request');
@@ -41,7 +42,7 @@ exports.searchByName = function *(q) {
 	return movies;
 };
 
-exports.findHotMovies = function *(hot, count) {
+exports.findHotMovies = function *(hot, count) {  //查找电影Top10
 	var movies = yield Movie
 		.find({})
 		.sort({'pv': hot})
@@ -56,7 +57,8 @@ exports.findMoviesByCate = function *(cat) {
 		.findOne({name: cat})
 		.populate({
 			path: 'movies',
-			select: 'title poster _id'
+			select: 'title poster _id rating',
+			options: {limit: 10,sort:{rating:-1}}
 		})
 		.exec();
 		

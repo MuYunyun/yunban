@@ -6,7 +6,7 @@ var path = require('path');
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 
-var dbUrl = 'mongodb://localhost/imooc';
+var dbUrl = 'mongodb://localhost/yunban';
 
 mongoose.connect(dbUrl);
 
@@ -31,11 +31,11 @@ var walk = function(path) { //遍历这个目录
 };
 walk(models_path);
 
-var menu = require('./wx/menu');
+var menu = require('./wx/menu');  //引人菜单
 var wx = require('./wx/index.js');
 var wechatApi = wx.getWechat();
 
-wechatApi.deleteMenu().then(function() {
+wechatApi.deleteMenu().then(function() {     //微信菜单
 	return wechatApi.createMenu(menu);
 })
 .then(function(msg) {

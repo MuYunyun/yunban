@@ -3,6 +3,9 @@
 var User = require('../../models/user/user');
 var ccap = require('ccap')();
 var captcha;
+var mongoose = require('mongoose');
+var Comment = mongoose.model('Comment');
+var MusicComment = mongoose.model('MusicComment');
 
 // 用户注册及登录框中验证码生成器控制器
 exports.captcha = function *(next) {
@@ -127,6 +130,38 @@ exports.del = function *(next) {
 	// 获取客户端Ajax发送的URL值中的id值
 	var id = this.query.id;
 	if (id) {
+		// 删除用户的同时删除与该用户所有相关的电影评论
+		yield Comment.remove({from: id}).exec();  //删除非叠楼里的该用户的评论
+		var comment = yield Comment.find({}).exec();     //删除叠楼里的该用户的评论
+		var len = comment.length;
+		for(var i=0; i < len; i++){
+			var leng = comment[i].reply.length;
+			for(var y=0; y < leng; y++){
+				if(comment[i].reply[y].from == id || comment[i].reply[y].to == id){
+					comment[i].reply.splice(y, 1);
+					y--;   //因为删掉了一个,所以索引提前,
+					leng--;  //总数也相应减少;
+				}
+				yield comment[i].save();
+			}
+		}
+
+		// 删除用户的同时删除与该用户所有相关的音乐评论
+		yield MusicComment.remove({from: id}).exec();  //删除非叠楼里的该用户的评论
+		var musicComment = yield MusicComment.find({}).exec();     //删除叠楼里的该用户的评论
+		var len = musicComment.length;
+		for(var i=0; i < len; i++){
+			var leng = musicComment[i].reply.length;
+			for(var y=0; y < leng; y++){
+				if(musicComment[i].reply[y].from == id || musicComment[i].reply[y].to == id){
+					musicComment[i].reply.splice(y, 1);
+					y--;   //因为删掉了一个,所以索引提前,
+					leng--;  //总数也相应减少;
+				}
+				yield musicComment[i].save();
+			}
+		}
+
 		// 如果id存在则服务器中将该条数据删除并返回删除成功的json数据
 		yield User.remove({_id:id});
 		this.body = ({success:1});     // 删除成功

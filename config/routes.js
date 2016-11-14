@@ -101,10 +101,14 @@ module.exports = function(router) {
 	router.post('/user/music/comment', User.signinRequired, MusicComment.save);
 	router.delete('/user/music/comment/:id', User.signinRequired, MusicComment.del);
 
-	// wechat
+	/*============ 云瓣微信路由 ============*/
 	router.get('/wechat/movie', Game.guess);
 	router.get('/wechat/movie/:id', Game.find);
 	router.get('/wechat/jump/:id', Game.jump);
 	router.get('/wx', Wechat.hear);
 	router.post('/wx', Wechat.hear);
+
+	//微信音乐模块
+	router.get('/wechat/music/:id', Game.findMusic);
+	router.get('/wechat/jumpMusic/:id', Game.jumpMusic);
 };

@@ -1,11 +1,29 @@
 extends ../wechat
 
+block link
+	link(href="/libs/css/wechat/movie_detail.min.css" rel="stylesheet")
 block content
-	h1 点我搜电影~
-	p#title
-	div#director
-	div#year
-	div#poster
+	.page
+		.hd
+			h1.page_title 点我搜电影
+		.bd
+			.weui_cells_title 电影介绍
+			.weui_cells
+				.weui_cell
+					.weui_cell_bd.weui_cell_primary
+						p 片名
+					#title.weui_cell_ft
+				.weui_cell
+					.weui_cell_bd.weui_cell_primary
+						p 导演
+					#director.weui_cell_ft
+				.weui_cell
+					.weui_cell_bd.weui_cell_primary
+						p 上映年份
+					#year.weui_cell_ft
+			.weui_cells
+				section
+					div(style="text-align:center;width:100%")#poster
 	script.
 		wx.config({
 			debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。

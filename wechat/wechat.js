@@ -1,6 +1,5 @@
 'use strict';
 
-
 var Promise = require('bluebird');
 var _ = require('lodash');
 var request = Promise.promisify(require('request')); //request进行promise化

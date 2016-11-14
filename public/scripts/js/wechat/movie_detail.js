@@ -7,7 +7,6 @@ $(function() {
   // 设置微信电影评分图片的样式
   // 获取该电影的云瓣评分来设置图片的Y轴位置，显示相应评分对象的星星数
   var movieStar = Math.ceil($('.rating-num strong').html() - 10) * 15;
-  console.log(movieStar);
   $('.star').css('background-position-y', movieStar);
 
   $('.comment').click(function(e) {

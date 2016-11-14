@@ -41,22 +41,23 @@ exports.searchByName = function *(q) {
   return musics;
 };
 
-exports.findHotMovies = function *(hot, count) {
-  var movies = yield Movie
+exports.findHotMusics = function *(hot, count) {  //查找音乐Top10
+  var musics = yield Music
       .find({})
       .sort({'pv': hot})
       .limit(count)
       .exec();
 
-  return movies;
+  return musics;
 };
 
-exports.findMoviesByCate = function *(cat) {
-  var category = yield Category
+exports.findMusicsByCate = function *(cat) {
+  var category = yield MusicCategory
       .findOne({name: cat})
       .populate({
-        path: 'movies',
-        select: 'title poster _id'
+        path: 'musics',
+        select: 'title poster _id rating',
+        options: {limit: 10,sort:{rating:-1}}
       })
       .exec();
 
@@ -64,10 +65,10 @@ exports.findMoviesByCate = function *(cat) {
 };
 
 exports.searchById = function *(id) {
-  var movie = yield Movie
+  var music = yield Music
       .findOne({_id: id})
       .exec();
 
-  return movie;
+  return music;
 };
 
