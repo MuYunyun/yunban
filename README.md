@@ -1,17 +1,17 @@
-基于NodeJs+MongoDB搭建的云瓣影音网站&微信端
+基于NodeJs搭建的云瓣影音网站&微信端
 =====================================
 网页端效果:
 -------
   
-<a href="http://oegv7uazl.bkt.clouddn.com/yunban/movie.gif" target="\_blank">电影界面演示</a>、<a href="http://oegv7uazl.bkt.clouddn.com/yunban/music.gif" target="\_blank">音乐界面演示</a>，或者可以访问<a href="http://www.wukunyao.cn" target="\_blank">在线地址</a>(送的云主机，自然有些卡)
+<a href="http://oegv7uazl.bkt.clouddn.com/yunban/movie.gif" target="\_blank">电影界面演示</a>、<a href="http://oegv7uazl.bkt.clouddn.com/yunban/music.gif" target="_blank">音乐界面演示</a>，或者可以访问<a href="http://www.wukunyao.cn" target="_blank">在线地址</a>(送的云主机，自然有些卡)
 微信端效果:
 -------
 <div>用微信扫二维码可以看效果(但测试号只能有100个人关注的限制~)</div>
-<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG8.jpeg" width="30%" height="33%" float"left" height="700" alt="电影首页"/>
-<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG4.jpeg" width="30%" height="33%" float"left" height="700" alt="电影首页"/>
-<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG3.jpeg" width="30%" height="33%" float"left" height="700" alt="电影首页"/>
-<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG6.jpeg" width="30%" height="33%" float"left" height="700" alt="电影首页"/>
-<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG2.jpeg" width="30%" height="33%" float"left" height="700" alt="电影首页"/><img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG5.jpeg" width="30%" height="33%" float"left" height="700" alt="电影首页"/>
+<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG8.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
+<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG4.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
+<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG3.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
+<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG6.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
+<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG2.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/><img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG5.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
 简介:
 ---------------
 **1. pc端后端搭建:**
@@ -97,9 +97,9 @@
 - 微信音乐界面：/wechat/music/:id
 
 
-待实现的点：
+todo：
 ------
-* 很多细节待优化；
+* 后台管理界面待优化；
 * 增加云瓣的app端;
 
 
