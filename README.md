@@ -6,11 +6,15 @@
 ### 微信端效果:
 
 <div>用微信扫二维码可以看效果(但测试号只能有100个人关注的限制~)</div>
-<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG8.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
-<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG4.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
-<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG3.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
-<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG6.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
-<img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG2.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/><img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG5.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
+<div>
+  <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG8.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
+  <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG4.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
+  <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG3.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
+</div>
+<div>
+  <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG6.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
+  <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG2.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/><img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG5.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
+</div>
 
 ### 简介:
 
