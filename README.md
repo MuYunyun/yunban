@@ -1,19 +1,19 @@
-基于NodeJs搭建的云瓣影音网站&微信端
-=====================================
-网页端效果:
--------
-  
+## 基于NodeJs搭建的云瓣影音网站&微信端
+
+### 网页端效果:
 <a href="http://oegv7uazl.bkt.clouddn.com/yunban/movie.gif" target="\_blank">电影界面演示</a>、<a href="http://oegv7uazl.bkt.clouddn.com/yunban/music.gif" target="_blank">音乐界面演示</a>，或者可以访问<a href="http://www.wukunyao.cn" target="_blank">在线地址</a>(送的云主机，自然有些卡)
-微信端效果:
--------
+
+### 微信端效果:
+
 <div>用微信扫二维码可以看效果(但测试号只能有100个人关注的限制~)</div>
 <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG8.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
 <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG4.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
 <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG3.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
 <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG6.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
 <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG2.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/><img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG5.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
-简介:
----------------
+
+### 简介:
+
 **1. pc端后端搭建:**
   * 使用NodeJs的`koa`框架并使用了部分`ES6`特性完成云瓣网站后端的搭建;
   * 使用`mongodb`完成数据存储,通过`mongoose`模块完成对`mongodb`数据的构建;
@@ -28,15 +28,15 @@
   * 前后端的数据请求交互通过`Ajax`完成;
   * (音乐端部分模块、电影画廊部分)使用`React+ES6`进行组件化开发，并使用Webpack实现资源模块管理
   * 使用`canvas`并调用`webAudio api`完成音乐播放界面的制作
-  
-**3. 项目微信端搭建:**  
+
+**3. 项目微信端搭建:**
   * 使用`weui`框架构造详情界面
   * 多种api接口的实现（比如地理经纬度查询、拍照、扫码、上传素材等）
-  * 调用`jdk`，实现语音查询电影 
-  
+  * 调用`jdk`，实现语音查询电影
+
 **4. 本地开发环境搭建:**
   * 使用`gulp`集成`jshint`对JS语法检查，`Sass`文件编译、压缩等功能，使用`mocha`完成用户注册存储等步骤的简单单元测试，以及服务器的自动重启等功能。
-  
+
 **5. 一些功能模块:**
   * 电影首页(实现了按热度、时间、评价、分类查询以及加载更多等功能模块)
   * 部分页面针对不同分辨率做了自适应；
@@ -55,18 +55,17 @@
   * 微信上能访问网页端；(并把电影画廊和音乐播放作为单独的菜单独立出来)
 
 
-项目页面:
--------
+### 项目页面:
 
-**电影界面:** 
+**电影界面:**
 - 电影宣传页:localhost:1234
 - 电影首页:localhost:1234/movieIndex
 - 电影画廊:localhost:1234/gallery
-- 电影详情页:localhost:1234/movie/:id 
+- 电影详情页:localhost:1234/movie/:id
 - 电影搜索页:localhost:1234/movie/results?q=xx
 
-**音乐界面:** 
-- 音乐首页:localhost:1234/musicIndex 
+**音乐界面:**
+- 音乐首页:localhost:1234/musicIndex
 - 音乐详情页:localhost:1234/music/:id
 - 音乐播放界面:localhost:1234/musicPlay
 - 音乐搜索页:localhost:1234/music/results?q=xx
@@ -97,10 +96,10 @@
 - 微信音乐界面：/wechat/music/:id
 
 
-todo：
-------
-* 后台管理界面待优化；
-* 增加云瓣的app端;
+### todo：
+
+- [ ] 后台管理界面待优化；
+- [x] 增加云瓣的app端;
 
 
 
