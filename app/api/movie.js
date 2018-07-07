@@ -28,7 +28,7 @@ exports.searchByCategory = function *(q) {
 	var categories = yield Category
 		.find({name: q})
 		.populate({
-			path: 'movies', 
+			path: 'movies',
 			select: 'title poster',
 		})
 		.exec();
@@ -48,7 +48,7 @@ exports.findHotMovies = function *(hot, count) {  //查找电影Top10
 		.sort({'pv': hot})
 		.limit(count)
 		.exec();
-		
+
 	return movies;
 };
 
@@ -61,7 +61,7 @@ exports.findMoviesByCate = function *(cat) {
 			options: {limit: 10,sort:{rating:-1}}
 		})
 		.exec();
-		
+
 	return category;
 };
 
@@ -69,7 +69,7 @@ exports.searchById = function *(id) {
 	var movie = yield Movie
 		.findOne({_id: id})
 		.exec();
-		
+
 	return movie;
 };
 
