@@ -24,9 +24,11 @@
 项目重构 ing，如果需要可以先使用之前的[版本](https://github.com/MuYunyun/yunban/tree/v1.0)
 
 ```
-mongod // 启动 mongodb
+mongod         // 启动数据库
 
-gulp   // 启动项目
+npm run serve  // 浏览器输入 localhost:1234 老项目
+
+npm run client // 浏览器输入 localhost:5678 重构项目
 ```
 
 补充：关于如何导入数据
@@ -41,7 +43,7 @@ gulp   // 启动项目
 
 重构计划第一步：
 
-- [ ] 将电影模块重构为 React + react-router + mobx
+- [ ] 将电影模块重构为 react + react-router + mobx
 - [ ] 升级 koa 框架
 
 重构计划第二步：

@@ -67,7 +67,7 @@
     "webpack": "^1.12.14"
   },
   "scripts": {
-    "client": "parcel ./index.html --open -p 4567 --no-cache",
+    "client": "parcel ./index.html --open -p 5678 --no-cache",
     "serve": "gulp"
   },
   "keywords": [
