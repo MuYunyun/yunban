@@ -45,7 +45,7 @@ exports.find = function *(next) {
 	if (!user) {
 		user = new User({
 			openid: openid,
-			password: 'imoocimooc',
+			password: 'yunbanyunban',
 			name: Math.random().toString(36).substr(2)
 		});
 
@@ -99,7 +99,7 @@ exports.findMusic = function *(next) {
 	if (!user) {
 		user = new User({
 			openid: openid,
-			password: 'imoocimooc',
+			password: 'yunbanyunban',
 			name: Math.random().toString(36).substr(2)
 		});
 

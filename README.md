@@ -1,11 +1,14 @@
-## 基于NodeJs搭建的云瓣影音网站&微信端
+## 云瓣影音网站 && 微信端
 
-### 网页端效果:
-<a href="http://oegv7uazl.bkt.clouddn.com/yunban/movie.gif" target="\_blank">电影界面演示</a>、<a href="http://oegv7uazl.bkt.clouddn.com/yunban/music.gif" target="_blank">音乐界面演示</a>，或者可以访问<a href="http://www.wukunyao.cn" target="_blank">在线地址</a>(送的云主机，自然有些卡)
+### PC 端效果:
+
+在线地址暂时访问不了(服务器到期)，截了两张 gif 图，如下：
+
+* [电影界面演示](http://oegv7uazl.bkt.clouddn.com/yunban/movie.gif)
+* [音乐界面演示](http://oegv7uazl.bkt.clouddn.com/yunban/music.gif)
 
 ### 微信端效果:
 
-<div>用微信扫二维码可以看效果(但测试号只能有100个人关注的限制~)</div>
 <div>
   <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG8.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
   <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG4.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
@@ -13,33 +16,57 @@
 </div>
 <div>
   <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG6.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
-  <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG2.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/><img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG5.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
+  <img src="http://oegv7uazl.bkt.clouddn.com/WechatIMG2.jpeg" width="30%" height="32%" float"left" height="700" alt="效果展示"/>
 </div>
 
-### 简介:
+### Usage(食用手册)
+
+项目重构 ing，如果需要可以先使用之前的[版本](https://github.com/MuYunyun/yunban/tree/v1.0)
+
+```
+mongod // 启动 mongodb
+
+gulp   // 启动项目
+```
+
+补充：关于如何导入数据
+
+* 项目目录下的 show/yunbanDB 为数据库文件，使用 `mongorestore -d yunbanDB --dir=数据库目录` 导入进数据库内，关于 mongodb 的使用，请参考[这篇文章](https://www.cnblogs.com/MuYunyun/p/5837840.html#_label3)
+
+* 设置管理员账号，更改数据库，输入 `db.myTable.update({name:'账号名'},{$set:{role:100}})`
+
+### Introduction:
+
+这是一个全栈的项目，包含了 PC 端、微信端、服务端、数据库，各端技术栈如下。部分技术栈已经老旧，所以进行以下重构：
+
+重构计划第一步：
+
+- [ ] 将电影模块重构为 React + react-router + mobx
+- [ ] 升级 koa 框架
+
+重构计划第二步：
+
+- [ ] 音乐模块重构
+- [ ] ...
 
 **1. pc端后端搭建:**
-  * 使用NodeJs的`koa`框架并使用了部分`ES6`特性完成云瓣网站后端的搭建;
-  * 使用`mongodb`完成数据存储,通过`mongoose`模块完成对`mongodb`数据的构建;
-  * 使用`jade`模板引擎完成页面创建渲染;
-  * 使用`Moment.js`格式化电影存储时间;
+  * 使用 `koa` 框架搭建云瓣网站服务端;
+  * 使用 `mongodb` 完成数据存储，通过 `mongoose` 模块完成对 `mongodb` 数据的构建;
+  * 使用 `jade` 模板引擎完成页面创建渲染;
 
 **2. 项目前端搭建:**
-  * 使用`jQuery`和`Bootsrap`完成网站前端JS脚本和样式处理;
-  * 使用`Sass`完成云瓣项目的样式编写;
-  * 使用`validate.js`完成对账号登录注册的判断;
-  * 使用`fullpage.js`完成电影宣传页面制作;
-  * 前后端的数据请求交互通过`Ajax`完成;
-  * (音乐端部分模块、电影画廊部分)使用`React+ES6`进行组件化开发，并使用Webpack实现资源模块管理
-  * 使用`canvas`并调用`webAudio api`完成音乐播放界面的制作
+  * 使用 `jQuery` 和 `Bootsrap` 完成网站前端 JS 脚本和样式处理;
+  * 使用 `Sass` 完成云瓣项目的样式编写;
+  * (音乐端部分模块、电影画廊部分)使用 `React` 进行组件化开发，并使用 `Webpack` 实现资源模块管理
+  * 使用 `canvas` 并调用 `webAudio api` 完成音乐播放界面的制作
 
 **3. 项目微信端搭建:**
-  * 使用`weui`框架构造详情界面
-  * 多种api接口的实现（比如地理经纬度查询、拍照、扫码、上传素材等）
-  * 调用`jdk`，实现语音查询电影
+  * 使用 `weui` 框架构造详情界面
+  * 多种 api 接口的实现（比如地理经纬度查询、拍照、扫码、上传素材等）
+  * 调用 `jdk`，实现语音查询电影
 
 **4. 本地开发环境搭建:**
-  * 使用`gulp`集成`jshint`对JS语法检查，`Sass`文件编译、压缩等功能，使用`mocha`完成用户注册存储等步骤的简单单元测试，以及服务器的自动重启等功能。
+  * 使用 `gulp` 集成 `jshint` 对 JS 语法检查，`Sass`文件编译、压缩等功能，使用 `mocha` 完成用户注册存储等步骤的简单单元测试，以及服务器的自动重启等功能。
 
 **5. 一些功能模块:**
   * 电影首页(实现了按热度、时间、评价、分类查询以及加载更多等功能模块)
@@ -58,8 +85,7 @@
   * 微信上实现与网页的评论同步;
   * 微信上能访问网页端；(并把电影画廊和音乐播放作为单独的菜单独立出来)
 
-
-### 项目页面:
+### Page:
 
 **电影界面:**
 - 电影宣传页:localhost:1234
@@ -99,11 +125,6 @@
 - 微信电影界面: /wechat/movie/:id
 - 微信音乐界面：/wechat/music/:id
 
-
-### todo：
-
-- [ ] 后台管理界面待优化；
-- [x] 增加云瓣的app端;
 
 
 

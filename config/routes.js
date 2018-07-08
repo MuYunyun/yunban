@@ -69,6 +69,8 @@ module.exports = function(router) {
 	router.get('/admin/city/list', User.signinRequired, User.adminRequired, City.list);
 	router.delete('/admin/city/list', User.signinRequired, User.adminRequired, City.del);
 
+/*============ 电影重构接口 =============*/
+
 
 	/*============ 云瓣音乐网站路由 ============*/
 	// 音乐主页路由

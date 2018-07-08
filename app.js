@@ -59,7 +59,7 @@ app.use(views(__dirname + '/app/views', {
 }));
 app.use(require('koa-static')(__dirname + '/public')); //设置静态文件目录
 
-app.keys = ['imooc'];  //设置session的keys
+app.keys = ['yunban'];  //设置session的keys
 app.use(session(app));  //传入session的中间件 用cookie实现用户的会话状态
 app.use(bodyParser());
 app.use(function *(next) {  //预处理用户的信息来作同步

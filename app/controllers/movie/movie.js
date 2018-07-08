@@ -7,7 +7,6 @@ var Category = require('../../models/movie/movie_category');
 var fs = require('fs'); //系统级别读写文件的模块
 var path = require('path');
 
-
 //detail page
 exports.detail = function *(next) {
 	var id = this.params.id;
@@ -83,7 +82,7 @@ exports.savePoster = function *(next) {     //文件上传
 
 		this.poster = poster;
 	}
-	
+
 	yield next;
 };
 
