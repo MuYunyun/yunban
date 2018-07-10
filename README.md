@@ -43,8 +43,11 @@ npm run client // 浏览器输入 localhost:5678 重构项目
 
 重构计划第一步：
 
-- [ ] 将电影模块重构为 react + react-router + mobx
-- [ ] 升级 koa 框架
+- [ ] 升级 koa1 到 koa2
+- [ ] 增加 restful 接口
+- [ ] 将电影模块重构为 react
+- [ ] 填充数据
+- [ ] 引人 mobx
 
 重构计划第二步：
 
